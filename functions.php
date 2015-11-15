@@ -95,6 +95,9 @@ add_action('wp_enqueue_scripts', 'themeFunction_scripts');
 // Comments & pingbacks display template
 include('inc/functions/comments.php');
 
+// Include widgets
+include_once( 'inc/widget-about.php' );
+
 // Optional Customizations
 // Includes: TinyMCE tweaks, admin menu & bar settings, query overrides
 include('inc/functions/customizations.php');
