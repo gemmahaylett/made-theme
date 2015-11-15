@@ -1,3 +1,5 @@
+require('es6-promise').polyfill();
+
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -10,7 +12,7 @@ var gulp = require('gulp'),
 // var imgDest = 'assets/images';
     
 gulp.task('styles', function(){
-	return sass('scss/') 
+	return sass('scss/style.scss') 
 		.on('error', function (err) {
 			console.error('Error!', err.message);
 		})
