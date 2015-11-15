@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>themeName</title>
+	<title>madeTheme</title>
 
-	<link rel="icon" type="image/ico" href="/wp-content/themes/themeTextDomain/favicon.ico" />
+	<link rel="icon" type="image/ico" href="/wp-content/themes/made-theme/favicon.ico" />
 	<style type="text/css">
 	
 	body {
@@ -28,7 +28,7 @@
 </head>
 <body>
 	<div id="page">
-		<img src="/wp-content/themes/themeTextDomain/assets/images/logo.png" alt="themeName" id="logo" />
+		<img src="/wp-content/themes/made-theme/assets/images/logo.png" alt="madeTheme" id="logo" />
 		COMING SOON
 	</div>
 </body>

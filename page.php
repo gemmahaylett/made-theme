@@ -4,7 +4,7 @@
  *
  * This is the template that displays all pages by default.
  *
- * @package themeHandle
+ * @package Made_Theme
  */
 
 get_header(); ?>

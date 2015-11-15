@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width Page
  *
- * @package themeHandle
+ * @package Made_Theme
  */
 
 get_header(); ?>

@@ -6,14 +6,14 @@ show_admin_bar( false );
 //if( function_exists('acf_add_options_sub_page') )
 //{
 //    acf_add_options_sub_page(array(
-//        'title' => __( 'Site Options', 'themeTextDomain' ),
+//        'title' => __( 'Site Options', 'made-theme' ),
 //        'parent' => 'options-general.php',
 //        'capability' => 'manage_options'
 //    ));
 //}
 
 // Add TinyMCE buttons that are disabled by default
-//function themeFunction_mce_buttons_2($buttons) {	
+//function made_theme_mce_buttons_2($buttons) {	
 //	/**
 //	 * Add in a core button that's disabled by default
 //	 */
@@ -22,24 +22,24 @@ show_admin_bar( false );
 //
 //	return $buttons;
 //}
-//add_filter('mce_buttons_2', 'themeFunction_mce_buttons_2');
+//add_filter('mce_buttons_2', 'made_theme_mce_buttons_2');
 
 
 // Remove all colors except those custom colors specified from TinyMCE
-//function themeFunction_change_mce_options( $init ) {
+//function made_theme_change_mce_options( $init ) {
 //	$custom_colors = '"#####1", "Color Name 1", "#####2", "Color Name 2", "#####3", "Color Name 3"';	
 //	$init['textcolor_map'] = '['.$custom_colors.']';
 //return $init;
 //}
-//add_filter('tiny_mce_before_init', 'themeFunction_change_mce_options');
+//add_filter('tiny_mce_before_init', 'made_theme_change_mce_options');
 
 
 // Modify the query on a given template (using conditionals)
-//function themeFunction_custom_query($query) {
+//function made_theme_custom_query($query) {
 //    if ($query->is_search) {
 //        $query->set('post_type', 'post');
 //    }
 //    return $query;
 //}
-//add_filter('pre_get_posts','themeFunction_custom_query');
+//add_filter('pre_get_posts','made_theme_custom_query');
 ?>

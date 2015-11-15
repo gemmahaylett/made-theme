@@ -2,7 +2,7 @@
 /**
  * The main sidebar
  *
- * @package themeHandle
+ * @package Made_Theme
  */
 
 ?>
