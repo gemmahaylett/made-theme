@@ -11,6 +11,7 @@
  */
 ?>
 <div id="comments" class="row">
+	<div class="col-md-12">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'themeTextDomain' ); ?></p>
 	<?php
@@ -68,5 +69,5 @@
 		 ) 
 	); ?>
 	      	
-
+</div>
 </div><!-- #comments -->

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<section id="primary" role="main" class="col pull-left span_8">
+<section id="primary" role="main" class="col col-md-12">
 
 	<?php if ( have_posts() ) : ?>
 

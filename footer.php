@@ -7,7 +7,7 @@
  * @package themeHandle
  */
 ?>
-
+   </div>
 	</div><!-- #main -->
 
 </div><!-- #page -->

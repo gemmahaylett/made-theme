@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<section id="primary" class="col pull-left span_8">
+<section id="primary" class="col-md-8">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
