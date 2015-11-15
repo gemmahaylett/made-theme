@@ -10,7 +10,7 @@ Set Up
 ------------
 I use [String Replacer](http://www.tensionsoftware.com/osx/stringreplacer/) (a Mac app) to find and replace the following strings, keeping the same general format as shown:
 
-`madeTheme` > `Theme Name`
+`themeName` > `Theme Name`
 
 `themeHandle` > `Theme_Name`
 

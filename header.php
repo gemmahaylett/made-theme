@@ -50,5 +50,5 @@
 			</nav><!-- #access -->  
 		</header><!-- #branding -->
 
-    <div class="container">
+
 		<div id="main" class="row">
