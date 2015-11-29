@@ -44,10 +44,27 @@
 			<a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo.png'" alt="<?php bloginfo('name'); ?>">
 			</a>
-
-			<nav class="access" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->  
+            <div class="container">
+              <div class="row">
+    			<nav class="col-md-8 inline-list row access" role="navigation">
+    				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    			</nav><!-- #access -->
+                <div class="col-md-4">
+                    <?php social_media_nav(); ?>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider">
+                <?php if ( get_field('top_slider', 'options') ) : ?>
+                  <?php while ( has_sub_field('top_slider', 'options') ) : ?>
+                    <div class="item">
+                        <a href="<?php the_sub_field('link', 'options'); ?>">
+                            <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                        </a>
+                    </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
 		</header><!-- #branding -->
 
      <div class="container">

@@ -40,3 +40,35 @@
 	}
 	
 }
+
+.social-media-menu {
+	.nav-link {
+		display: none;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+	}
+
+	i {
+		color: white;
+		padding: 15px;
+	}
+
+	i.fa-facebook {
+    background: $red;
+	}
+
+	i.fa-instagram {
+    background: $dark-yellow;
+	}
+
+	i.fa-pinterest {
+    background: $light-gray;
+	}
+
+	i.fa-twitter {
+    background: $orange;
+	}
+}

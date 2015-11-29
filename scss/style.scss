@@ -13,7 +13,7 @@ Text Domain: made-theme
 /* FONTS
 -------------------------- */
 // Uncomment/use this file for self-hosted web fonts
-// @import "fonts/all";
+@import "fonts/all";
 
 /* RESET & BASE
 ------------------ */
@@ -33,6 +33,8 @@ Text Domain: made-theme
 ------------------ */
 @import "typography";
 @import "forms";
+@import "vendor";
+@import "owl";
 
 /* =COMPONENTS
 ------------------ */
@@ -45,7 +47,7 @@ Text Domain: made-theme
 @import "content";
 @import "pages/all";
 // Uncomment if you have a custom home page
-// @import "pages/home";
+@import "pages/press";
 
 /* =BLOG SPECIFIC
 ------------------ */

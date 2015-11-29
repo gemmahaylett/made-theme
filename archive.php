@@ -11,17 +11,34 @@
 get_header(); ?>
 
 <section id="primary" role="main" class="col col-md-8">
+	<div class="filter">
+	<?php if (is_category( )) {
+	  $cat = get_query_var('cat');
+	  $curcat = get_category ($cat);
+		$args = array('categories' => $curcat->term_id);
+		$tags = get_category_tags($args); 
+		echo '<button class="action filter__item filter__item--selected" data-filter="*">All</button>';
+		foreach ($tags as $tag) {
+	    echo '<button class=\'action filter__item filter__item\' data-filter=\'.';
+	    echo $tag->tag_name;
+	    echo '\'>'.$tag->tag_name.'</button>';
+		}
+	}?>
+	</div>
 
 	<?php if ( have_posts() ) : ?>
 
-		<?php get_template_part( 'inc/archive-header' ); ?>
-
 		<?php /* Start the Loop */ ?>
+	<section class="grid grid--loading">
+		<img class="grid__loader" src="images/grid.svg" width="60" alt="Loader image" />
+    <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
+    <div class="grid__sizer"></div>
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php get_template_part( 'content', 'grid' ); ?>
 
 		<?php endwhile; ?>
+	</section>
 
 		<?php get_template_part( 'inc/pagination' ); ?>
 

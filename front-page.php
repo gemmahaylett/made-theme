@@ -1,6 +1,9 @@
 <?php
 /**
- * Home Page
+ * Main Template File
+ * 
+ * This file is used to display a page when nothing more specific matches a query.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Made_Theme
  */
@@ -9,21 +12,24 @@ get_header(); ?>
 
 <section id="primary" role="main" class="col col-md-8">
 
-<?php while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
+				
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-		</header><!-- .entry-header -->
-	
-		<div class="entry-content">
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'made-theme' ) . '</span>', 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
-	</article><!-- #post-<?php the_ID(); ?> -->
+			<?php get_template_part( 'content', get_post_format() ); ?>
 
-<?php endwhile; // end of the loop. ?>
+		<?php endwhile; ?>
+
+		<?php get_template_part( 'inc/pagination' ); ?>
+
+	<?php else : ?>
+
+		<?php get_template_part( 'content', 'none' ); ?>
+
+	<?php endif; ?>
 
 </section><!-- #primary -->
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

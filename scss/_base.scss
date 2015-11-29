@@ -6,9 +6,18 @@ $max-width: 1800px;
 $footerheight: 50px;
 
 /* Colors */
-$text: #555;
-$links: blue;
-$hover: red;
+$red:  #F1625e;
+$yellow: #F4E303;
+$blue: #BCE0E5;
+$light-gray: #DBD7D3;
+$medium-gray: #828175;
+$dark-gray: #4C4B4C;
+$orange: #F47F50;
+$dark-yellow: #D4DC4C;
+
+$text: $dark-gray;
+$links: $dark-gray;
+$hover: $medium-gray;
 
 $bg: #FFF;
 
