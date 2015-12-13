@@ -16,3 +16,14 @@
 		width: 75%;
 	}
 }
+
+.menu li {
+  display: inline;
+  list-style-type: none;
+}
+
+.image-circle {
+	border-radius: 50%;
+  -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}

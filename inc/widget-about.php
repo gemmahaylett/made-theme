@@ -21,23 +21,25 @@ class made_theme_about_widget extends WP_Widget {
     $about_text = apply_filters( 'widget_title', $instance['about_text'] );
     $about_btn = apply_filters( 'widget_title', $instance['about_btn'] );
     $about_link = apply_filters( 'widget_title', $instance['about_link'] );
-    $about_img = apply_filters( 'widget_title', $instance['about_img'] );
     
     echo $before_widget;
-    if ( ! empty( $about_img ) )
-      echo '<img src=' . $about_img . '>';
+    echo '<div class="about-widget">';
+    if ( get_field('widget_img', 'widget_' . $widget_id) )
+    $link_img = get_field('widget_img', 'widget_' . $widget_id);
+    echo '<img class="image-circle" src=\'' . $link_img . '\'>'; 
 
     if ( ! empty( $title ) )
-      echo $before_title . $title . $after_title;
+      echo '<h1>' . $title . '</h1>';
 
     if ( ! empty( $about_text ) )
-      echo $about_text;
+      echo '<p>' . $about_text . '</p>';
 
-    if ( ! empty( $about_link ) && ! empty( $about_btn ) )
-      echo '<a href=' . $about_link . '>'.$about_btn.'</a>'
+    if ( ! empty( $about_btn ) )
+      echo '<button><a href=' . $about_link . '>'.$about_btn.'</a></button>';
+
+    echo '</div>';
 
     ?>
-    
       <!-- ALL CONTENT WITHIN THE WIDGET GOES HERE -->
     
     <?php echo $after_widget;
@@ -49,7 +51,6 @@ class made_theme_about_widget extends WP_Widget {
     $instance['about_text'] = strip_tags( $new_instance['about_text'] );
     $instance['about_btn'] = strip_tags( $new_instance['about_btn'] );
     $instance['about_link'] = strip_tags( $new_instance['about_link'] );
-    $instance['about_img'] = strip_tags( $new_instance['about_img'] );
     return $instance;
   }
   // Admin widget form (for title field)
@@ -81,13 +82,6 @@ class made_theme_about_widget extends WP_Widget {
     else {
       $about_link = __( 'About Link', 'text_domain' );
     }
-
-    if ( isset( $instance[ 'about_img' ] ) ) {
-      $about_img = $instance[ 'about_img' ];
-    }
-    else {
-      $about_img = __( 'About Image', 'text_domain' );
-    }
     ?>
     <p>
     <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -96,12 +90,6 @@ class made_theme_about_widget extends WP_Widget {
     <textarea class="widefat" id="<?php echo $this->get_field_id( 'about_text' ); ?>" name="<?php echo $this->get_field_name( 'about_text' ); ?>" type="text"><?php echo esc_attr( $about_text ); ?></textarea>
     <label for="<?php echo $this->get_field_id( 'about_btn' ); ?>"><?php _e( 'About Btn Text:' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'about_btn' ); ?>" name="<?php echo $this->get_field_name( 'about_btn' ); ?>" type="text" value="<?php echo esc_attr( $about_btn ); ?>" />
-    </p>
-    <label for="<?php echo $this->get_field_id( 'about_link' ); ?>"><?php _e( 'About Link:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'about_link' ); ?>" name="<?php echo $this->get_field_name( 'about_link' ); ?>" type="text" value="<?php echo esc_attr( $about_link ); ?>" />
-    <label for="<?php echo $this->get_field_id( 'about_img' ); ?>"><?php _e( 'About Image:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'about_img' ); ?>" name="<?php echo $this->get_field_name( 'about_img' ); ?>" type="text" value="<?php echo esc_attr( $about_img ); ?>" />
-    
     </p>
     <?php 
   }

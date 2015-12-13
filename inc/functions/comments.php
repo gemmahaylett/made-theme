@@ -26,21 +26,9 @@ function made_theme_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php
-						$avatar_size = 35;
-							if ( '0' != $comment->comment_parent )
-							$avatar_size = 35;
-					
-							echo get_avatar( $comment, $avatar_size );
-					
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s %2$s', 'made-theme' ),
-							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
-							sprintf( '<time pubdate datetime="%2$s">%3$s</time>',
-								esc_url( get_comment_link( $comment->comment_ID ) ),
-								get_comment_time( 'c' ),
-								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s at %2$s', 'made-theme' ), get_comment_date(), get_comment_time() )
-							)
+						printf( __( '%1$s', 'made-theme' ),
+							sprintf( '<span class="fn">%s says:</span>', get_comment_author_link() )
 						);
 					?>
 

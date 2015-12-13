@@ -28,6 +28,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     <!-- stylesheets are enqueued via functions.php -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
     <!-- all other scripts are enqueued via functions.php -->
     <!--[if lt IE 9]>
@@ -40,32 +41,59 @@
  
 <body <?php body_class(); ?>>
 	<div id="page">
-		<header id="site-header" role="banner" class="row">            
-			<a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo.png'" alt="<?php bloginfo('name'); ?>">
-			</a>
-            <div class="container">
-              <div class="row">
-    			<nav class="col-md-8 inline-list row access" role="navigation">
-    				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-    			</nav><!-- #access -->
-                <div class="col-md-4">
-                    <?php social_media_nav(); ?>
-                </div>
-              </div>
-            </div>
-            <div class="top-slider">
-                <?php if ( get_field('top_slider', 'options') ) : ?>
-                  <?php while ( has_sub_field('top_slider', 'options') ) : ?>
-                    <div class="item">
-                        <a href="<?php the_sub_field('link', 'options'); ?>">
-                            <img src="<?php the_sub_field('image', 'options'); ?>"/>
-                        </a>
+		<header id="site-header" role="banner" class="row">
+            <div class="header"> 
+                <div class="container">
+                    <div class="shop-link row">
+                        <div class="shop-circle col-md-12">
+                            <a href="/made/shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
+                        </div>
+                    </div> 
+                    <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo.png'" alt="<?php bloginfo('name'); ?>">
+                    </a>
+                </div>  
+
+                <hr>     
+
+                <div class="container">
+                    <div class="row">
+                        <div class="menu-button">Menu</div>
+            			<nav class="access col-md-10" role="navigation">
+            				<?php wp_nav_menu( array( 
+                                'theme_location' => 'primary',
+                                'menu_class' => 'flexnav', //Adding the class for FlexNav
+                                'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
+                            )); ?>
+                        </nav>
+                        <nav class="col-md-2" role="navigation">
+                            <ul id="social-header-menu" class="social-media-menu">
+                              <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+                              <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+                              <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>"><i class="icon-fixed-width fa fa-pinterest"></i></a></li>
+                              <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
+                              <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
+                              <li><a title="Search" href="/made/search"><i class="icon-fixed-width fa fa-search"></i></a></li>
+                            </ul>
+                        </nav>
                     </div>
-                  <?php endwhile; ?>
-                <?php endif; ?>
+                </div>
+                  
             </div>
+
 		</header><!-- #branding -->
+
+    <div class="top-slider row">
+        <?php if ( get_field('top_slider', 'options') ) : ?>
+          <?php while ( has_sub_field('top_slider', 'options') ) : ?>
+            <div class="item">
+                <a href="<?php the_sub_field('link', 'options'); ?>">
+                    <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                </a>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 
      <div class="container">
 		<div id="main" class="row">

@@ -25,13 +25,19 @@ class made_theme_social_widget extends WP_Widget {
     $title = apply_filters( 'widget_title', $instance['title'] );
 
     echo $before_widget; 
-    if ( ! empty( $title ) )
-      echo $before_title . $title . $after_title;
+    if ( ! empty( $title ) ) 
+      echo '<h3>' . $title . '</h3>';
 
-    social_media_nav();
+    ?>
 
+    <ul id="social-sidebar-menu" class="social-media-menu square-icons widget-icons">
+      <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+      <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+      <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
+      <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
+    </ul>
 
-    echo $after_widget;
+    <?php echo $after_widget;
   }
 
 
@@ -40,8 +46,6 @@ class made_theme_social_widget extends WP_Widget {
   public function update( $new_instance, $old_instance ) {
     $instance = array();
     $instance['title'] = strip_tags( $new_instance['title'] );
-    $instance['link_img'] = strip_tags( $new_instance['link_img'] );
-    $instance['link'] = strip_tags( $new_instance['link'] );
 
     return $instance;
   }
@@ -56,26 +60,10 @@ class made_theme_social_widget extends WP_Widget {
     else {
       $title = __( 'New title', 'text_domain' );
     }
-    if ( isset( $instance[ 'link_img' ] ) ) {
-      $link_img = $instance[ 'link_img' ];
-    }
-    else {
-      $link_img = __( 'New Link Img', 'text_domain' );
-    }
-    if ( isset( $instance[ 'link' ] ) ) {
-      $link = $instance[ 'link' ];
-    }
-    else {
-      $link = __( 'New Link', 'text_domain' );
-    }
     ?>
     <p>
     <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-    <label for="<?php echo $this->get_field_id( 'link_img' ); ?>"><?php _e( 'Link Img:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'link_img' ); ?>" name="<?php echo $this->get_field_name( 'link_img' ); ?>" type="text" value="<?php echo esc_attr( $link_img ); ?>" />
-    <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Form Link:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>" />
     </p>
     <?php 
   }

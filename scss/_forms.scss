@@ -7,7 +7,7 @@ textarea {
 }
 #{$all-text-inputs-focus},
 textarea:focus {
-	color: $text;
+	color: $medium-gray;
 }
 input[type=submit] {
 	-webkit-appearance: none;
@@ -15,7 +15,8 @@ input[type=submit] {
 
 /* Placeholders */
 ::placeholder {
-	color: $text;
+	color: $medium-gray;
+  font-weight: 400;
 }
 
 // Customize Chrome autofill background (yellow by default)
@@ -31,3 +32,58 @@ input#s {
 input#searchsubmit {
 }
 
+.ginput_container {
+  margin-top: 1.25em !important;
+  input[type=text], textarea {
+    padding: 10px 15px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid $yellow !important;
+  }
+
+  ::placeholder {
+    color: $red;
+  }
+}
+.gform_wrapper textarea.medium {
+  height: 15em !important;
+}
+
+.gform_footer {
+  input[type=submit] {
+    text-transform: uppercase;
+    color: white;
+    background-color: $yellow;
+    padding: 10px 40px;
+  }
+}
+
+.gform_wrapper {
+  max-width: 100% !important;
+}
+
+.comment-form-author input, .comment-form-email input, #comment {
+  border-color: $yellow;
+  padding: 9px 18px 9px;
+  text-transform: uppercase;
+}
+
+.form-submit input {
+  background-color: $blue;
+  color: white;
+  font-weight: 700;
+  padding: 15px 20px;
+  letter-spacing: .25em;
+}
+
+#s {
+  width: 85%;
+}
+
+#searchsubmit {
+  padding: 8px 10px 9px;
+  background-color: $blue;
+  color: white;
+  margin-left: 8px;
+  letter-spacing: .25em;
+}

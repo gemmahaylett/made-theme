@@ -6,3 +6,142 @@
 		margin-right: 6px;
 	}
 }
+
+.header {
+  text-align: center;
+}
+
+.email {
+  color: $yellow;
+  font-weight: 700;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page li a {
+  color: $medium-gray;
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.page .hentry {
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  background : url('assets/images/stitch-dash.png') 50% 0  repeat;
+  border : 0;
+  height : 10px;
+  margin : 2em 0;
+}
+
+.shop-circle a img {
+  float: right;
+}
+
+.header .logo img {
+  margin-top: -45px;
+}
+
+/* Top Slider */
+.top-slider {
+  margin-top: 17px;
+  .owl-controls {
+    position: static;
+  }
+  .owl-nav div {
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+  }
+
+  .owl-prev {
+    margin-left: 12px;
+  }
+
+  .owl-next {
+    right: 12px;
+    padding-right: 20px;
+  }
+}
+
+.top-slider {
+
+  .owl-next, .owl-prev {
+    width: 32px;
+    height: 60px;
+    background-repeat: no-repeat;
+  }
+
+  .owl-next {
+    background-image: url('assets/images/left-arrow-white.png');
+  }
+
+  .owl-prev {
+    background-image: url('assets/images/right-arrow-white.png');
+  }
+}
+
+.bottom-slider-nav {
+  text-align: right;
+
+  .bs-next, .bs-prev {
+    cursor: pointer;
+    display: inline-block;
+    width: 15px;
+    height: 25px;
+    background-repeat: no-repeat;
+  }
+
+  .bs-next {
+    background-image: url('assets/images/left-arrow.png');
+  }
+
+  .bs-prev {
+    background-image: url('assets/images/right-arrow.png');
+  }
+}
+
+.bottom-slider {
+  .item {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+
+    &:hover .caption{
+      visibility: visible;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      position: relative;
+    }
+
+    .caption {
+      width: 200px;
+      height: 50px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      color: white;
+      visibility: hidden;
+
+      a {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        border: 3px white solid;
+        padding: 5% 8%;
+        font-weight: 700;
+      }
+    }
+  }
+}

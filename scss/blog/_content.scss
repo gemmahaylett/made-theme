@@ -1,19 +1,48 @@
 .entry-title,
-.entry-title a {
+h1.entry-title a {
 	clear: both;
 	color: $links;
-	line-height: 1em;
-	padding-bottom: 0.5em;
+  font-size: 1.5em;
+  font-family: $header-pri;
+  letter-spacing: .2em;
+  line-height: 1.2;
+  color: $red;
+  text-align: left
+}
+h4.entry-title a {
+  font-size: 0.75em;
+  font-family: $header-pri;
+  letter-spacing: .2em;
+  color: $red;
 }
 .entry-meta {
 	clear: both;
 }
-.entry-date {
-	color: $links;
-	font-size: 11px;
-	padding-bottom: 2px;
+.entry-header {
+  span, span a {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-size: 12px;
+  }
+  margin-bottom: 30px;
+}
+.entry-category {
+  text-transform: uppercase;
+  font-size: .83em;
+  margin-top: 10px;
+  line-height: 1.3;
+  a {
+    padding-right: 8px;
+    border-right: $border;
+  }
+}
+.separator {
+  margin: 0 5px;
 }
 
+.grid_posts {
+
+}
 /* Handle sticky posts */
 .sticky {	
 }
@@ -24,5 +53,57 @@
     text-transform: uppercase;
     letter-spacing: .25em;
     line-height: 1.67em;
+  }
+}
+
+.grid_posts .grid__item {
+  text-align: left;
+  img {
+    width: 100%;
+  }
+}
+
+.related-posts {
+  column-count: 2;
+  column-gap: 3em;
+
+  p, h4 {
+    text-align: center;
+  }
+
+  .entry-author {
+    padding-right: 8px;
+    border-right: $border; 
+  }
+}
+
+.related-post-item { /* Masonry bricks or child elements */
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.show-more {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.show-more-btn {
+  background: url('assets/images/show-more.png') no-repeat;
+  width: 102px;
+  height: 102px;
+  border: none;
+}
+
+.favorites {
+  border-top: 1px solid $medium-gray;
+  margin-top: 5%;
+
+  h3 {
+    margin: 3.5% 0;
+  }
+
+  h4 {
+    margin-top: 15px;
   }
 }

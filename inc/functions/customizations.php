@@ -57,6 +57,13 @@ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 }
 
+function posts_on_homepage( $query ) {
+  if ( $query->is_home() && $query->is_main_query() ) {
+      $query->set( 'posts_per_page', 3 );
+  }
+}
+add_action( 'pre_get_posts', 'posts_on_homepage' );
+
 
 // Remove all colors except those custom colors specified from TinyMCE
 //function made_theme_change_mce_options( $init ) {

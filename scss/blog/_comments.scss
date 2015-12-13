@@ -31,7 +31,6 @@
 }
 
 article.comment {
-	border-bottom: $border;
 	padding: 10px 0;
 }
 .comment-meta {
@@ -64,4 +63,34 @@ article.comment {
 .commentlist .children > li.bypostauthor {
 	border: $border;
 	padding: 5px 10px;
+}
+
+.comments-footer {
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    letter-spacing: .25em;
+    line-height: 1;
+  }
+}
+
+.comments-link {
+	border-right: $border;
+	padding-right: 10px;
+}
+
+.share-love {
+	padding: 0 10px;
+}
+
+.comment-form-title {
+  margin-bottom: 30px;
 }

@@ -24,11 +24,12 @@
 		display: inline-block;
 	}
 	#{$all-text-inputs} {
-		width: 255px;
+		width: 49%;
 	}
 	textarea {
-		width: 90%;
+		width: 100%;
 		min-height: 150px;
+    margin-top: 2%;
 		resize: vertical;
 	}
 	.form-submit {
@@ -72,4 +73,8 @@ a.comment-reply-link {
 .comment-subscription-form {
   clear: both;
   display: block;
+}
+
+#author {
+  margin-right: 2%;
 }

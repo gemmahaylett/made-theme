@@ -34,18 +34,18 @@ class made_theme_popular_widget extends WP_Widget {
     //GET the posts
     global $postcount;
 
-    echo $before_widget . $title ;
+    echo $before_widget . '<h3 class="title-underline">'. $title .'</h3>'; ?>
+      <?php if ( get_field('posts', 'widget_' . $widget_id) ) : ?>
+      <?php while ( has_sub_field('posts', 'widget_' . $widget_id) ) : ?>
+        <div class="popular-post">
+          <a href="<?php the_sub_field('post_link', 'widget_' . $widget_id); ?>">
+              <img class="img-responsive" src="<?php the_sub_field('post_image', 'widget_' . $widget_id); ?>"/>
+          </a>
+        </div>
+      <?php endwhile; ?>
+      <?php endif;
 
-      $args = array("posts_per_page" => 4, "orderby" => "comment_count", "order" => "DESC");
-      $posts_array = get_posts($args);
-      foreach($posts_array as $post){ 
-        echo "<a href='";
-        echo get_permalink( $post->ID );
-        echo "'>";
-        echo get_the_post_thumbnail( $post->ID );
-        echo "</a>";
-        //echo get_title( $post->ID );
-      } 
+
       echo $after_widget;
     }
      

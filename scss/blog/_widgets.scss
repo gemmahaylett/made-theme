@@ -5,13 +5,23 @@
 }
 .widget-title {
 	color: $text;
-	text-align: left;
+	text-align: center;
 }
 .widget ul {
 	margin: 0;
 	ul {
 		margin-left: 1.5em;
 	}
+}
+
+#widgetfeed {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.widgetfeed {
+  margin-bottom: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 /* Special Classes */
@@ -27,7 +37,127 @@
 		margin: 0 0 10px;
 	}
 	#s {
-		width: 95%;
+		width: 100%;
 		display: inline-block;
 	}
+}
+
+.about-widget {
+  border: $border;
+  padding: 5% 8% 0;
+  margin-bottom: 25px;
+  text-align: center;
+
+  p {
+    text-align: justify;
+  }
+
+  button {
+    display: block;
+    margin: 1em auto -2em;
+    width: 80%;
+    height: 50px;
+    background-color: $yellow;
+
+    a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+    }
+  }
+
+}
+
+.newsletter-subscribe, .email-subscribe {
+
+  background-color: $blue;
+  padding: 7%;
+
+  h3 {
+    padding: 0 17%
+  }
+
+  input {
+    border: none;
+    width: 83%;
+  }
+
+  .btn {
+    width: 32px;
+    height: 34px;
+    border: none;
+    padding: 14px;
+    margin-left: 6px;
+  }
+}
+
+.newsletter-subscribe .btn {
+  background: url('assets/images/white-arrow-btn.png') no-repeat;
+}
+
+.email-subscribe .btn {
+  background: url('assets/images/yellow-arrow-btn.png') no-repeat;
+}
+
+
+.email-subscribe {
+  background-color: $light-gray;
+}
+
+.widget_categories {
+  margin-bottom: 35px;
+
+  h3 {
+    border-bottom: 1px solid $medium-gray;
+    padding: 25px;
+  }
+
+	ul {
+		li {
+			list-style: none;
+			text-align: center;
+		}
+
+		-webkit-column-count: 2; -webkit-column-gap:20px; 
+		-moz-column-count:2; -moz-column-gap:20px; 
+		-o-column-count:2; -o-column-gap:20px; 
+		column-count:2; column-gap:20px; 
+	}
+}
+
+.widget_made-theme-link-widget {
+  margin-top: 25px;
+}
+
+.widget_search {
+	input[type=submit] {
+		display: none;
+	}
+}
+
+#social-sidebar-menu {
+  margin-left: -18px !important;
+
+  li {
+    margin-left: 18px;
+  }
+}
+
+#s {
+  text-transform: uppercase;
+  border-color: $light-gray;
+  padding: 8px 12px;
+  letter-spacing: .25em;
+  font-size: .9em;
+}
+ 
+.popular-post {
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  border-bottom: 1px solid $light-gray;
+  padding: 25px;
+  margin-bottom: 25px;
 }

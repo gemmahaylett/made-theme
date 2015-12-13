@@ -35,9 +35,9 @@ class made_theme_instagram_widget extends WP_Widget {
           target: 'widgetfeed',
           get: 'user',
           limit: 4,
-          userId: 1026771166,
+          userId: 182650508,
           resolution: 'low_resolution',
-          accessToken: '1026771166.467ede5.97c26306448641f3ad770649bb842e23',
+          accessToken: '182650508.467ede5.e8b7cf599294426b82d0e455e6cd7bf2',
           template: '<div class="col-md-6 col-sm-6 col-xs-6 widgetfeed"><a href="{{link}}"><img src="{{image}}" /></a></div>'
         });
 
@@ -45,7 +45,7 @@ class made_theme_instagram_widget extends WP_Widget {
       });
       </script>
 
-      <div id="widgetfeed"></div> 
+      <div id="widgetfeed" class="row"></div> 
                
     <?php echo $after_widget;
   }

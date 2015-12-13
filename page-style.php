@@ -94,7 +94,21 @@
 
         <h1>Social Media</h1>
 
-        <?php social_media_nav(); ?>
+        <ul id="social-header-menu" class="social-media-menu">
+          <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+          <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+          <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>"><i class="icon-fixed-width fa fa-pinterest"></i></a></li>
+          <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
+          <li><a title="Search" href="/search"><i class="icon-fixed-width fa fa-search"></i></a></li>
+        </ul>
+
+        <h1>Typography</h1>
+
+        <h1>H1 Header</h1>
+        <h2>H2 Header</h2>
+        <h3>H3 Header</h3>
+        <h4>H4 Header</h4>
+        <h5>H5 Header</h5>
         
     </div> <!-- end container -->
   </div> <!-- end main-->

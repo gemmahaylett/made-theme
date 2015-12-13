@@ -2,7 +2,7 @@
  *******************/
 
 /* Sizes */
-$max-width: 1800px;
+$max-width: 980px;
 $footerheight: 50px;
 
 /* Colors */
@@ -22,10 +22,12 @@ $hover: $medium-gray;
 $bg: #FFF;
 
 /* Fonts */
-$main: sans-serif;
+$main: 'Lato', sans-serif; /* Lato Light, Bold, */
+$header-pri: 'walkway_boldregular', sans-serif; /* WalkwayBold Regular */
+$header-sec: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /* Borders */
-$border: 1px solid #000;
+$border: 1px solid $medium-gray;
 
 /* Breakpoints */
 $cap: 1920px;

@@ -10,9 +10,8 @@
 get_header(); ?>
 
 <section id="primary" role="main" class="col col-md-8">
-
 		<?php while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?>" <?php post_class('ask-content'); ?>>
         <div class="entry-content">
           <?php the_content(); ?>
         </div><!-- .entry-content -->
@@ -20,13 +19,17 @@ get_header(); ?>
 
 		<?php endwhile; // end of the loop. ?>
 
-    <?php if ( get_field('posts') ) : ?>
-      <?php while ( has_sub_field('post') ) : ?>
-        <div class="ask-post">
-          <?php the_sub_field('post'); ?>
-        </div>
-      <?php endwhile; ?>
-    <?php endif; ?>
+    <div class="fav-grid">
+      <?php if ( get_field('posts') ) : ?>
+        <?php while ( has_sub_field('posts') ) : ?>
+          <div class="fav-post">
+            <a href="<?php the_sub_field('post_link'); ?>">
+                <img src="<?php the_sub_field('post_image'); ?>"/>
+            </a>
+          </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
 
 </section><!-- #primary -->
 <?php get_sidebar(); ?>

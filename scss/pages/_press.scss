@@ -1,5 +1,62 @@
+.press-grid {
+  column-count: 2;
+  column-gap: 3em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.press-group { /* Masonry bricks or child elements */
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
 .press-links {
+  padding: 8%;
+  border: 2px $light-gray solid;
+
+  p {
+    margin-bottom: 0;
+  }
+
   a {
-    font-size: 0.83em;
+    letter-spacing: 0;
   }
 }
+
+.media-item {
+  p {
+    color: #4C4B4C;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  ul {
+  display: inline;
+
+    li {
+      display: inline;
+    }
+
+    li:before{
+      content: '\2022';
+      margin-right: 0.5em;
+    }
+
+    a {
+      color: $dark-gray;
+    }
+
+    li:first-child:before {
+      content: '';
+      margin-right: 0;
+    }
+  }
+}
+
+.press-links .media-item {
+  text-indent: -1em;
+  padding-left: 1em;
+  display: block;
+}
+

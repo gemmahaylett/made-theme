@@ -40,7 +40,12 @@
 		</div>
 		<div class="comments-link">
 			SHARE THE LOVE: 
-			<?php social_media_nav(); ?>
+			<ul id="social-share-menu" class="social-media-menu square-icons">
+	      <li><a title="Facebook" target-"_blank" href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+		    <li><a title="Instagram" target-"_blank" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+		    <li><a title="Pinterest" target-"_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
+		    <li><a title="Twitter" target-"_blank" href="https://twitter.com/home?status=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
+		  </ul>
 		</div>
 	</footer><!-- #entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

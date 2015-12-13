@@ -16,12 +16,10 @@ if ($posttags) {
 		<?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
 		<h4 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'made-theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h4>
-		<span class="entry-date">
-		<?php $categories = get_the_category(array('hierarchical'=> 1));
+		<p class="entry-category">
+		<?php $categories = get_the_category();
 		if ( ! empty( $categories ) ) {
 		    echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 		}?>
-		</span> 
-		<span class="entry-category"><?php echo get_the_date(); ?></span>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'made-theme' ) . '</span>', 'after' => '</div>' ) ); ?>
+		<?php echo get_the_date(); ?></p>
 	</div><!-- .entry-content -->

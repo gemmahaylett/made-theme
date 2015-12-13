@@ -46,8 +46,10 @@ Text Domain: made-theme
 ------------------ */
 @import "content";
 @import "pages/all";
-// Uncomment if you have a custom home page
 @import "pages/press";
+@import "pages/ask";
+@import "pages/about";
+
 
 /* =BLOG SPECIFIC
 ------------------ */

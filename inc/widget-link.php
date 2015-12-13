@@ -22,8 +22,8 @@ class made_theme_link_widget extends WP_Widget {
 
   public function widget( $args, $instance ) {
     extract( $args );
+
     $title = apply_filters( 'widget_title', $instance['title'] );
-    $link_img = apply_filters( 'widget_title', $instance['link_img'] );
     $link = apply_filters( 'widget_title', $instance['link'] );
 
     echo $before_widget; 
@@ -31,8 +31,9 @@ class made_theme_link_widget extends WP_Widget {
       if ( ! empty( $title ) )
         echo '<h3>'. $title .'</h3>';
 
-      if ( ! empty( $link_img ) && ! empty( $link ) )
-        echo '<a href=' . $link . '><img src=' . $link_img . '></a>'; 
+      if ( get_field('widget_img', 'widget_' . $widget_id) )
+        $link_img = get_field('widget_img', 'widget_' . $widget_id);
+        echo '<a href=\''.$link.'\'><img class="img-responsive" src=\'' . $link_img . '\'></a>'; 
     
     echo $after_widget;
   }
@@ -43,7 +44,6 @@ class made_theme_link_widget extends WP_Widget {
   public function update( $new_instance, $old_instance ) {
     $instance = array();
     $instance['title'] = strip_tags( $new_instance['title'] );
-    $instance['link_img'] = strip_tags( $new_instance['link_img'] );
     $instance['link'] = strip_tags( $new_instance['link'] );
 
     return $instance;
@@ -59,12 +59,6 @@ class made_theme_link_widget extends WP_Widget {
     else {
       $title = __( 'New title', 'text_domain' );
     }
-    if ( isset( $instance[ 'link_img' ] ) ) {
-      $link_img = $instance[ 'link_img' ];
-    }
-    else {
-      $link_img = __( 'New Link Img', 'text_domain' );
-    }
     if ( isset( $instance[ 'link' ] ) ) {
       $link = $instance[ 'link' ];
     }
@@ -75,9 +69,7 @@ class made_theme_link_widget extends WP_Widget {
     <p>
     <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-    <label for="<?php echo $this->get_field_id( 'link_img' ); ?>"><?php _e( 'Link Img:' ); ?></label> 
-    <input class="widefat" id="<?php echo $this->get_field_id( 'link_img' ); ?>" name="<?php echo $this->get_field_name( 'link_img' ); ?>" type="text" value="<?php echo esc_attr( $link_img ); ?>" />
-    <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Form Link:' ); ?></label> 
+    <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Image Link:' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>" />
     </p>
     <?php 

@@ -1,4 +1,4 @@
-.access {
+/*.access {
 	margin: 0;
 	div {
 		float: left;
@@ -39,23 +39,16 @@
 		
 	}
 	
-}
+} */
 
 .social-media-menu {
-	.nav-link {
-		display: none;
-	}
-
 	li {
 		list-style: none;
 		display: inline-block;
 	}
+}
 
-	i {
-		color: white;
-		padding: 15px;
-	}
-
+.square-icons {
 	i.fa-facebook {
     background: $red;
 	}
@@ -64,11 +57,72 @@
     background: $dark-yellow;
 	}
 
-	i.fa-pinterest {
+	i.fa-pinterest-p {
     background: $light-gray;
 	}
 
-	i.fa-twitter {
+	i.fa-twitter, i.fa-youtube-play {
     background: $orange;
 	}
+}
+
+.widget-icons {
+	i {
+		color: white;
+		padding: 15px;
+    font-size: 2em;
+	}
+
+	i.fa-facebook {
+		padding-left: 18px;
+    padding-right: 15px;
+	}
+}
+
+.comment-icons {
+	i {
+		color: white;
+		padding: 7px;
+    font-size: 1.2em;
+	}
+}
+
+#menu-footer-menu li::before {
+  content: '\7c';
+  margin-right: 1em;
+}
+
+#menu-footer-menu li:first-child::before {
+  content: '';
+}
+
+#menu-footer-menu li {
+  margin-right: .75em;
+}
+
+#social-header-menu {
+	margin-left: -35%;
+}
+
+#social-header-menu {
+	i {
+		padding: .6em .1em;
+		font-size: 1.35em;
+	}
+}
+
+.youtube-nav a {
+	background-color: $yellow !important;
+}
+
+.youtube-nav a::after {
+	content: '\f16a';
+  font-family: FontAwesome;
+  padding-left: 5px;
+  color: white;
+  font-size: 1em;
+}
+
+.nav-previous, .nav-next {
+	margin-bottom: 35px;
 }

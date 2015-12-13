@@ -21,7 +21,7 @@ get_header(); ?>
 		foreach ($tags as $tag) {
 	    echo '<button class=\'action filter__item filter__item\' data-filter=\'.';
 	    echo $tag->tag_name;
-	    echo '\'>'.$tag->tag_name.'</button>';
+	    echo '\'>'.str_replace('_', ' ', $tag->tag_name).'</button>';
 		}
 	}?>
 	</div>
@@ -29,7 +29,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
-	<section class="grid grid--loading">
+	<section class="grid grid_posts grid--loading">
 		<img class="grid__loader" src="images/grid.svg" width="60" alt="Loader image" />
     <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
     <div class="grid__sizer"></div>

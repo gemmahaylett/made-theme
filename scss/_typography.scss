@@ -9,40 +9,79 @@ body, input, textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	text-transform: uppercase;
 }
+
+/* Post tite, Page Titles */
 h1 {
-	
+	font-size: 1.85em;
+	font-family: $header-pri;
+	letter-spacing: .22em;
+	line-height: 1.8;
+	color: $red;
 }
-h2 {
-	
+
+/* More Favorites Section */
+h2 { 
+	font-size: 1.375em;
+	font-family: $header-sec;
+	font-weight: bold;
+	letter-spacing: .2em;
+	line-height: 2;
+	color: $red;
 }
-h3 {
-	
+
+/* Widget Titles and Comment post bar */
+h3 { 
+	font-size: 1.1em;
+  font-family: $header-pri;
+  letter-spacing: .25em;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
+
+/* Category Page Article Titles */
 h4 {
-	
+	font-size: 0.8833em;
+	font-family: $header-pri;
+	letter-spacing: .2em;
+	line-height: .95;
+	color: $red;
 }
+
+/* About Page Links */
 h5 {
-	
+	font-size: 1.3em;
+	font-family: $header-pri;
+	font-weight: bold;
+	letter-spacing: .2em;
+	line-height: 1.6;
+	color: $red;
+	text-align: center;
+	padding: 5% 13%;
 }
+
 h6 {
 	
 }
 
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 2.5em 0;
 }
 
 /* Text elements */
 p {
 	margin-bottom: 1.5em;
+	letter-spacing: .15em;
+	text-align: justify;
+	line-height: 1.8;
+	font-weight: 300;
+
 }
 ul, ol {
-	margin: 0 0 1.5em 2.5em;
+	//margin: 0 0 1.5em 2.5em;
 }
 ul {
 	list-style: square;
@@ -72,8 +111,11 @@ dd {
 }
 strong {
 }
-em, i {
+em {
 	font-style: italic;
+}
+i {
+	font-style: normal;
 }
 blockquote {
 	font-style: italic;
@@ -131,6 +173,7 @@ sub {
 a {
 	color: $links;
 	text-decoration: none;
+	letter-spacing: .25em;
 	&:focus,
 	&:active,
 	&:hover {

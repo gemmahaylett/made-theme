@@ -1,9 +1,3 @@
-// function scriptname(){
-// 	jQuery(document).ready(function($){
-// 		// script goes here
-// 	});
-// }
-
 /**
  * main.js
  * http://www.codrops.com
@@ -90,7 +84,6 @@
 
   function initIsotope() {
     iso = new Isotope( grid, {
-      isResizeBound: false,
       itemSelector: '.grid__item',
       percentPosition: true,
       masonry: {
@@ -142,18 +135,40 @@
 
   init(); 
 
-  jQuery('.top-slider').owlCarousel({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    margin: 10
+  jQuery(".flexnav").flexNav({
+    'animationSpeed' : 250, // default drop animation speed 
+    'transitionOpacity': true, // default opacity animation 
+    'buttonSelector': '.menu-button', // default menu button class 
+    'hoverIntent': false, // use with hoverIntent plugin 
+    'hoverIntentTimeout': 150, // hoverIntent default timeout 
+    'calcItemWidths': false // dynamically calcs top level nav item widths 
   });
 
-  jQuery('.bottom-slider').owlCarousel({
-    infinite: true,
+  jQuery('.top-slider').owlCarousel({
+    loop: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    margin: 10
+    slideBy: 3,
+    autoWidth:true,
+    margin: 10,
+    nav:true,
+    navText: ["",""]
   });
+
+  var bslider = jQuery('.bottom-slider');
+  bslider.owlCarousel({
+    loop: true,
+    slidesToShow: 1,
+    slideBy: 3,
+    margin: 10,
+    autoWidth:true
+  });
+
+  jQuery('.bs-next').click(function() {
+    bslider.trigger('next.owl.carousel');
+  })
+  // Go to the previous item
+  jQuery('.bs-prev').click(function() {
+    bslider.trigger('prev.owl.carousel');
+  })
 
 })(window);
