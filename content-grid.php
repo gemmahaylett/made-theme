@@ -8,7 +8,8 @@
 $posttags = get_the_tags();
 if ($posttags) {
   foreach($posttags as $tag) {
-    $taglist = $taglist . $tag->name . ' '; 
+    $tagname = str_replace(' ', '_', $tag->name);
+    $taglist = $taglist . $tagname . ' '; 
   }
 }?>
 
@@ -21,5 +22,5 @@ if ($posttags) {
 		if ( ! empty( $categories ) ) {
 		    echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 		}?>
-		<?php echo get_the_date(); ?></p>
+		<span><?php echo get_the_date(); ?></span></p>
 	</div><!-- .entry-content -->

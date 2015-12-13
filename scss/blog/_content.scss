@@ -5,7 +5,6 @@ h1.entry-title a {
   font-size: 1.5em;
   font-family: $header-pri;
   letter-spacing: .2em;
-  line-height: 1.2;
   color: $red;
   text-align: left
 }
@@ -15,6 +14,15 @@ h4.entry-title a {
   letter-spacing: .2em;
   color: $red;
 }
+
+h1.entry-title a, h4.entry-title a {
+  line-height: 1.2;
+}
+
+h4.entry-title {
+  margin-top: 15px;
+}
+
 .entry-meta {
 	clear: both;
 }
@@ -34,6 +42,9 @@ h4.entry-title a {
   a {
     padding-right: 8px;
     border-right: $border;
+  }
+  span {
+    padding-left: 8px;
   }
 }
 .separator {

@@ -48,27 +48,19 @@ hr {
 
 /* Top Slider */
 .top-slider {
-  margin-top: 17px;
+
+  margin-top: 25px;
+  z-index: -1;
+
   .owl-controls {
     position: static;
   }
+
   .owl-nav div {
     position: absolute;
     top: 45%;
     z-index: 10;
   }
-
-  .owl-prev {
-    margin-left: 12px;
-  }
-
-  .owl-next {
-    right: 12px;
-    padding-right: 20px;
-  }
-}
-
-.top-slider {
 
   .owl-next, .owl-prev {
     width: 32px;
@@ -77,10 +69,13 @@ hr {
   }
 
   .owl-next {
+    right: 12px;
+    padding-right: 20px;
     background-image: url('assets/images/left-arrow-white.png');
   }
 
   .owl-prev {
+    margin-left: 12px;
     background-image: url('assets/images/right-arrow-white.png');
   }
 }

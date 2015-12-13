@@ -81,19 +81,21 @@
                   
             </div>
 
+            <div class="top-slider">
+                <?php if ( get_field('top_slider', 'options') ) : ?>
+                  <?php while ( has_sub_field('top_slider', 'options') ) : ?>
+                    <div class="item">
+                        <a href="<?php the_sub_field('link', 'options'); ?>">
+                            <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                        </a>
+                    </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+
 		</header><!-- #branding -->
 
-    <div class="top-slider row">
-        <?php if ( get_field('top_slider', 'options') ) : ?>
-          <?php while ( has_sub_field('top_slider', 'options') ) : ?>
-            <div class="item">
-                <a href="<?php the_sub_field('link', 'options'); ?>">
-                    <img src="<?php the_sub_field('image', 'options'); ?>"/>
-                </a>
-            </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
+
 
      <div class="container">
 		<div id="main" class="row">

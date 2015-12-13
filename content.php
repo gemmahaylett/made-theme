@@ -26,6 +26,12 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
+
+		<?php 
+			if (has_post_thumbnail( $post->ID ) ): 
+				$pinimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+			endif;
+		?>
 		
 		<ul class="comments-footer">
 			<li class="comments-link">
@@ -42,7 +48,7 @@
 				<ul id="social-share-menu" class="social-media-menu square-icons comment-icons">
 		      <li><a title="Facebook" target-"_blank" href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
 		    	<li><a title="Instagram" target-"_blank" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
-		    	<li><a title="Pinterest" target-"_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php echo $pinterestimage[0]; ?>&description=<?php the_title(); ?>"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
+		    	<li><a title="Pinterest" target-"_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php echo $pinimage[0]; ?>&description=<?php the_title(); ?>"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
 		    	<li><a title="Twitter" target-"_blank" href="https://twitter.com/home?status=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
 		    </ul>
 			</li>

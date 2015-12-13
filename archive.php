@@ -20,8 +20,8 @@ get_header(); ?>
 		echo '<button class="action filter__item filter__item--selected" data-filter="*">All</button>';
 		foreach ($tags as $tag) {
 	    echo '<button class=\'action filter__item filter__item\' data-filter=\'.';
-	    echo $tag->tag_name;
-	    echo '\'>'.str_replace('_', ' ', $tag->tag_name).'</button>';
+	    echo str_replace(' ', '_', $tag->tag_name);
+	    echo '\'>'.$tag->tag_name.'</button>';
 		}
 	}?>
 	</div>
