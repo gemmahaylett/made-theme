@@ -18,8 +18,8 @@ get_header(); ?>
       </article><!-- #post-<?php the_ID(); ?> -->
 
 		<?php endwhile; // end of the loop. ?>
-
-    <div class="fav-grid">
+ 
+    <div class="fav-grid clearfix">
       <?php if ( get_field('posts') ) : ?>
         <?php while ( has_sub_field('posts') ) : ?>
           <div class="fav-post">

@@ -75,24 +75,25 @@ h4.entry-title {
 }
 
 .related-posts {
-  column-count: 2;
-  column-gap: 3em;
+  margin: 0 -15px;
+  .column { float: left; }
+  .size-1of2 { width: 50%; }
+}
 
-  p, h4 {
+.related-post-item { 
+  padding-right: 15px;
+  .entry-category {
     text-align: center;
-  }
-
-  .entry-author {
-    padding-right: 8px;
-    border-right: $border; 
+    span { padding: 0; }
   }
 }
 
-.related-post-item { /* Masonry bricks or child elements */
-  display: inline-block;
-  margin: 0 0 1em;
-  width: 100%;
+.related-posts[data-columns]::before {
+  content: '2 .column.size-1of2';
 }
+
+/* These are the classes that are going to be applied: */
+
 
 .show-more {
   text-align: center;
@@ -118,3 +119,10 @@ h4.entry-title {
     margin-top: 15px;
   }
 }
+
+@media all and (max-width: 550px)  { 
+  .related-posts {
+    .size-1of2 { width: 100%; }
+  }
+}
+

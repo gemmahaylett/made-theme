@@ -57,7 +57,7 @@ function made_theme_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'made-theme' ),
 		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-12 col-sm-12 col-xs-12">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -116,6 +116,13 @@ function made_theme_scripts() {
     '1.0.0',
     true
   );
+
+  wp_enqueue_script( 'ajax-pagination',  
+    get_stylesheet_directory_uri() . '/assets/vendor/ajax-pagination.js', 
+    array( 'jquery' ), 
+    '1.0', 
+    true 
+  );
 	// theme scripts
 	wp_enqueue_script(
 		'theme-init',
@@ -125,6 +132,12 @@ function made_theme_scripts() {
 		true
 	);
 
+  global $wp_query;
+  wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'query_vars' => json_encode( $wp_query->query ),
+    'post_id' => json_encode ($wp_query->post->ID)
+  ));
 }    
 add_action('wp_enqueue_scripts', 'made_theme_scripts');
 

@@ -5,6 +5,7 @@
   letter-spacing: .3em;
   display: table;
   width: 100%;
+  margin: 0;
 }
 
 .footer-slider-outer {
@@ -42,5 +43,37 @@
     z-index: 10;
     right: 0;
     top: 0;
+  }
+}
+
+@media all and (min-width: 1050px) and (max-width: 1200px)  { 
+  .footer-item-center:nth-child(2) {
+    width: 20%;
+  }
+
+  .footer-item-center:nth-child(2n+1) {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: 1050px)  { 
+  .footer-item-center {
+    display: block;
+    width: 100% !important;
+  }
+
+  .footer-item-center:nth-child(2) {
+    margin: 5% 0;
+  }
+}
+
+@media all and (max-width: 410px)  { 
+  #menu-footer-menu li {
+    display: block;
+  }
+
+  #menu-footer-menu li::before {
+    content: '';
+    margin-right: 0;
   }
 }

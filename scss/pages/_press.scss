@@ -60,3 +60,17 @@
   display: block;
 }
 
+@media all and (max-width: 992px)  { 
+  .press-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media all and (max-width: 700px)  { 
+  .press-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+

@@ -1,7 +1,5 @@
 .widget {
-	clear: both;
-	margin: 0;
-	padding: 0 0 20px;
+	margin-bottom: 20px;
 }
 .widget-title {
 	color: $text;
@@ -161,3 +159,46 @@
   padding: 25px;
   margin-bottom: 25px;
 }
+
+/* Media Queries */
+@media all and (min-width: 992px) and (max-width: 1198px)  { 
+  .email-subscribe, .newsletter-subscribe {
+    input {
+      width: 80%;
+    }
+    h3 {
+      padding: 0 13%;
+    }
+  }
+
+  #social-sidebar-menu li {
+    margin-left: 10px;
+  }
+}
+
+@media all and (min-width: 700px) and (max-width: 992px)  { 
+  .email-subscribe, .newsletter-subscribe {
+    input {
+      width: 93%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #secondary {
+    padding: 0;
+  }
+
+  #social-sidebar-menu {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 700px)  { 
+  .email-subscribe, .newsletter-subscribe {
+    input {
+      width: 87%;
+    }
+  }
+}
+

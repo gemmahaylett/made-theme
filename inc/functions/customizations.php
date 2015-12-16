@@ -64,6 +64,44 @@ function posts_on_homepage( $query ) {
 }
 add_action( 'pre_get_posts', 'posts_on_homepage' );
 
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
+
+function my_ajax_pagination() {
+  $post_id = json_decode( stripslashes( $_POST['post_id'] ), true );
+
+  //get tag info
+  $tags = wp_get_post_tags( $post_id );
+  $offset = $_POST['offset'];
+  $posts = new WP_Query( array( 'posts_per_page' => 1, 'offset' => $offset, 'tag__in' => array($tags[0]->term_id) ) );
+ // $posts = new WP_Query( $query_vars );
+  $GLOBALS['wp_query'] = $posts;
+  $tag_count = get_posts_count_by_tag($tags[0]->term_id);
+
+  if( $posts->have_posts() ) {
+    while ( $posts->have_posts() ) { 
+      $posts->the_post();
+      get_template_part( 'content', 'related' );
+    }
+  }
+
+  if($_POST['offset']+1 >= $tag_count ) {
+    echo '<div id="show-more-hide"></div>';
+  }
+  die();
+}
+
+function get_posts_count_by_tag($tag_name)
+{
+    $tags = get_tags(array ('search' => $tag_name) );
+    foreach ($tags as $tag) {
+      if ($tag->name == $tag_name) {
+         return $tag->count;
+      }
+    }
+    return 0;
+}
+
 
 // Remove all colors except those custom colors specified from TinyMCE
 //function made_theme_change_mce_options( $init ) {

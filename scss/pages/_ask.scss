@@ -2,6 +2,7 @@
   column-count: 2;
   column-gap: 1em;
   margin-top: 30px;
+  float: left;
 }
 
 .fav-post { /* Masonry bricks or child elements */
@@ -11,5 +12,12 @@
 
   img {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 550px)  { 
+  .fav-grid {
+    column-count: 1;
+    column-gap: 0;
   }
 }

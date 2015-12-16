@@ -148,11 +148,14 @@
     loop: true,
     slidesToShow: 3,
     slideBy: 3,
+    lazyLoad : true,
     autoWidth:true,
     margin: 10,
     nav:true,
     navText: ["",""]
   });
+
+  jQuery('.top-slider').show();
 
   var bslider = jQuery('.bottom-slider');
   bslider.owlCarousel({
@@ -165,10 +168,59 @@
 
   jQuery('.bs-next').click(function() {
     bslider.trigger('next.owl.carousel');
-  })
+  });
   // Go to the previous item
   jQuery('.bs-prev').click(function() {
     bslider.trigger('prev.owl.carousel');
-  })
+  });
+
+  /*jQuery('.related-posts').masonry({
+    // options
+    itemSelector: '.related-post-item',
+    columnWidth: 150
+  });*/
+
+  var offset = 4;
+  jQuery('.show-more-btn').click(function( event ) {
+    event.preventDefault();
+    jQuery.ajax({
+      url: ajaxpagination.ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajax_pagination',
+        query_vars: ajaxpagination.query_vars,
+        post_id: ajaxpagination.post_id,
+        offset: offset + 1
+      },
+      success: function( html ) {
+        var grid = document.querySelector('.related-posts');
+        var item = document.createElement('article');
+        salvattore.appendElements(grid, [item]);
+        item.outerHTML = html;
+      }
+    });
+
+    jQuery.ajax({
+      url: ajaxpagination.ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajax_pagination',
+        query_vars: ajaxpagination.query_vars,
+        post_id: ajaxpagination.post_id,
+        offset: offset + 2
+      },
+      success: function( html ) {
+        var grid = document.querySelector('.related-posts');
+        var item = document.createElement('article');
+        salvattore.appendElements(grid, [item]);
+        item.outerHTML = html;
+        offset = offset + 2; 
+
+        if(jQuery('#show-more-hide')){
+          jQuery('.show-more-btn').hide();
+        }  
+      }
+    });
+  });
 
 })(window);
