@@ -127,4 +127,8 @@
 	margin-bottom: 35px;
 }
 
-
+@media all and (max-width: 992px)  {
+	#social-header-menu {
+  	margin-left: 0;
+	}
+}

@@ -73,7 +73,7 @@ function my_ajax_pagination() {
   //get tag info
   $tags = wp_get_post_tags( $post_id );
   $offset = $_POST['offset'];
-  $posts = new WP_Query( array( 'posts_per_page' => 1, 'offset' => $offset, 'tag__in' => array($tags[0]->term_id) ) );
+  $posts = new WP_Query( array( 'posts_per_page' => 1, 'post__not_in' => array($post_id), 'offset' => $offset, 'tag__in' => array($tags[0]->term_id) ) );
  // $posts = new WP_Query( $query_vars );
   $GLOBALS['wp_query'] = $posts;
   $tag_count = get_posts_count_by_tag($tags[0]->term_id);

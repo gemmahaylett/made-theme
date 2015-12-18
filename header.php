@@ -21,7 +21,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title( '', true, 'right' ); ?></title>
     
     <!-- favicon & links -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
@@ -46,7 +46,7 @@
                 <div class="container">
                     <div class="shop-link row">
                         <div class="shop-circle col-md-12">
-                            <a href="/made/shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
+                            <a href="/pattern-shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
                         </div>
                     </div> 
                     <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">

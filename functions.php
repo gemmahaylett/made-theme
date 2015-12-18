@@ -7,11 +7,14 @@
  * @package Made_Theme
  */
 
+update_option('siteurl','localhost/made');
+update_option('home','localhost/made');
+
 /* OEMBED SIZING
  ========================== */
  
 if ( ! isset( $content_width ) )
-	$content_width = 600;
+	$content_width = 690;
 	
 	
 /* THEME SETUP
