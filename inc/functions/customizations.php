@@ -102,22 +102,17 @@ function get_posts_count_by_tag($tag_name)
     return 0;
 }
 
+require get_template_directory() . '/inc/init.php';
 
-// Remove all colors except those custom colors specified from TinyMCE
-//function made_theme_change_mce_options( $init ) {
-//	$custom_colors = '"#####1", "Color Name 1", "#####2", "Color Name 2", "#####3", "Color Name 3"';	
-//	$init['textcolor_map'] = '['.$custom_colors.']';
-//return $init;
-//}
-//add_filter('tiny_mce_before_init', 'made_theme_change_mce_options');
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
+function woo_remove_product_tabs( $tabs ) {
 
-// Modify the query on a given template (using conditionals)
-//function made_theme_custom_query($query) {
-//    if ($query->is_search) {
-//        $query->set('post_type', 'post');
-//    }
-//    return $query;
-//}
-//add_filter('pre_get_posts','made_theme_custom_query');
+  unset( $tabs['description'] );        // Remove the description tab
+  unset( $tabs['reviews'] );      // Remove the reviews tab
+  //unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+  return $tabs;
+
+}
 ?>

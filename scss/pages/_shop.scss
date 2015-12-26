@@ -1,0 +1,46 @@
+.single-product {
+  div.product {
+    .images {
+      .thumbnails {
+        a.zoom {
+          width: 27.8%;
+          margin-right: 8.28%;
+        }
+      }
+    }
+  }
+}
+
+.single-product div.product .images {
+  width: 50%;
+}
+
+.single-product div.product .summary {
+  width: 44%;
+}
+
+.widget_product_categories ul li.current-cat:before {
+  content: none;
+}
+
+.widget_product_categories ul li:before {
+  content: none;
+}
+
+/* Mini-Cart */
+.product_list_widget {
+  li img {
+    float: left;
+    margin-right: 15px;
+    max-width: 4em;
+  }
+  .quantity {
+    text-align: right;
+  }
+
+  a:nth-child(2) {
+    float: right;
+    position: relative;
+    text-align: right;
+  }
+}
