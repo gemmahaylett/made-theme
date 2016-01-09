@@ -46,7 +46,7 @@
                 <div class="container">
                     <div class="shop-link row">
                         <div class="shop-circle col-md-12">
-                            <a href="/pattern-shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
+                            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-link.png"></a>
                         </div>
                     </div> 
                     <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
@@ -79,11 +79,28 @@
                     </div>
                 </div>
                   
+            
             </div>
+
+            <?php if(is_shop()){ ?>
+            <div class="shop-slider">
+              <?php if ( get_field('shop_slider', 'options') ) : ?>
+                <?php while ( has_sub_field('shop_slider', 'options') ) : ?>
+                  <div class="item">
+                      <a href="<?php the_sub_field('link', 'options'); ?>">
+                          <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                      </a>
+                  </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
+          </div>
+          <?php } else { ?>
+
+          <hr> 
+
+          <?php } ?>
 
 		</header><!-- #branding -->
 
-
-
-     <div class="container">
-		<div id="main" class="row">
+<div class="container">
+    <div id="main" class="row">

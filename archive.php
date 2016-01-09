@@ -17,30 +17,58 @@ get_header(); ?>
 	  $curcat = get_category ($cat);
 		$args = array('categories' => $curcat->term_id);
 		$tags = get_category_tags($args); 
-		echo '<button class="action filter__item filter__item--selected" data-filter="*">All</button>';
+		echo '<a href="'.$curcat->term_name.'" class="action filter__item filter__item--selected" data-filter="*">All</button>';
 		foreach ($tags as $tag) {
-	    echo '<button class=\'action filter__item filter__item\' data-filter=\'.';
+	    echo '<a href=\'?tag=';
+	    echo str_replace(' ', '_', $tag->tag_id);
+	    echo ' \' class=\'action filter__item filter__item\' data-filter=\'.';
 	    echo str_replace(' ', '_', $tag->tag_name);
-	    echo '\'>'.$tag->tag_name.'</button>';
+	    echo '\'>'.$tag->tag_name.'</a>';
 		}
 	}?>
 	</div>
 
-	<?php if ( have_posts() ) : ?>
+	<?php 
 
-		<?php /* Start the Loop */ ?>
-	<section class="grid grid_posts grid--loading">
-		<img class="grid__loader" src="images/grid.svg" width="60" alt="Loader image" />
-    <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
-    <div class="grid__sizer"></div>
-		<?php while ( have_posts() ) : the_post(); ?>
+	  if($_GET['tag']) {
+	  	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	    echo $paged;
+	    $args = array(
+	      'category__in' => $curcat->term_id, 
+	      //'nopaging' => false, 
+	      'paged' => $paged,
+	      'tag__in' =>  $_GET['tag'], //must use tag id for this field
+	      'posts_per_page' => 4
+			); //get all posts
+		}
+			
+		else {
+			echo 'no tag';
+			$args = array(
+	      'category' => $curcat->term_id, 
+	      'posts_per_page' => 4
+			); //get all posts
+		}
+		
+			$wp_query = new WP_Query( $args );
+		?>
 
-			<?php get_template_part( 'content', 'grid' ); ?>
+		<?php if ( $wp_query->have_posts() ) : ?>
 
-		<?php endwhile; ?>
-	</section>
+		<section class="grid grid_posts grid--loading">
+			<img class="grid__loader" src="images/grid.svg" width="60" alt="Loader image" />
+	    <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
+	    <div class="grid__sizer"></div>
 
-		<?php get_template_part( 'inc/pagination' ); ?>
+		<?php 
+			while ($wp_query->have_posts()) {
+				$wp_query->the_post();
+		 		get_template_part( 'content', 'grid' );
+		  }
+    ?>
+  	</section>
+	
+		<?php get_template_part( 'inc/pagination-cat' ); ?>
 
 	<?php else : ?>
 

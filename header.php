@@ -46,7 +46,7 @@
                 <div class="container">
                     <div class="shop-link row">
                         <div class="shop-circle col-md-12">
-                            <a href="/pattern-shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
+                            <a href="/shop"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/shop-link.png"></a>
                         </div>
                     </div> 
                     <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">

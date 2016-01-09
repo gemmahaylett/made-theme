@@ -31,10 +31,10 @@ class made_theme_social_widget extends WP_Widget {
     ?>
 
     <ul id="social-sidebar-menu" class="social-media-menu square-icons widget-icons">
-      <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
-      <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
-      <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
-      <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
+      <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+      <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+      <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-pinterest-p"></i></a></li>
+      <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
     </ul>
 
     <?php echo $after_widget;

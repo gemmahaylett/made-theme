@@ -90,3 +90,17 @@ get_header( 'shop' ); ?>
 	?>
 
 <?php get_footer( 'shop' ); ?>
+
+<script>
+;(function(window) {
+	jQuery('.shop-slider').owlCarousel({
+	    loop: true,
+	    slidesToShow: 1,
+	    slideBy: 1,
+	    lazyLoad : true,
+	    autoWidth:true,
+	    nav:true,
+	    navText: ["",""]
+	  });
+})(window);
+</script>

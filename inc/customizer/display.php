@@ -103,12 +103,6 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			color: ' . $button_text_color . ';
 		}
 
-		button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
-			background-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
-			border-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
-			color: ' . $button_text_color . ';
-		}
-
 		button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
 			background-color: ' . $button_alt_background_color . ';
 			border-color: ' . $button_alt_background_color . ';
