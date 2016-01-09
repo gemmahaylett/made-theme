@@ -38,7 +38,8 @@ input#searchsubmit {
     padding: 10px 15px !important;
     text-transform: uppercase;
     font-weight: 700;
-    border: 2px solid $yellow !important;
+    border: 2px solid $medium-gray !important;
+    letter-spacing: .25em;
   }
 
   ::placeholder {
@@ -55,6 +56,7 @@ input#searchsubmit {
     color: white;
     background-color: $yellow;
     padding: 10px 40px;
+    letter-spacing: .25em;
   }
 }
 

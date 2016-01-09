@@ -46,6 +46,14 @@
   }
 }
 
+.credits {
+  font-size: 0.6em;
+  a {
+    color: white;
+    letter-spacing: .5em;
+  }
+}
+
 @media all and (min-width: 1050px) and (max-width: 1200px)  { 
   .footer-item-center:nth-child(2) {
     width: 20%;

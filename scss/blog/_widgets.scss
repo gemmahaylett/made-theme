@@ -67,6 +67,10 @@
 
 }
 
+.cat-item a:hover {
+  color: $red;
+}
+
 .newsletter-subscribe, .email-subscribe {
 
   background-color: $blue;
@@ -108,7 +112,8 @@
 
   h3 {
     border-bottom: 1px solid $medium-gray;
-    padding: 25px;
+    padding-bottom: 20px;
+    padding-top: 0px;
   }
 
 	ul {
@@ -125,7 +130,7 @@
 }
 
 .widget_made-theme-link-widget {
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 .widget_search {
@@ -156,7 +161,7 @@
 
 .title-underline {
   border-bottom: 1px solid $light-gray;
-  padding: 25px;
+  padding-bottom: 20px;
   margin-bottom: 25px;
 }
 

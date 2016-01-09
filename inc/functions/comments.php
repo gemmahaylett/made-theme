@@ -28,7 +28,7 @@ function made_theme_comment( $comment, $args, $depth ) {
 					<?php
 						/* translators: 1: comment author, 2: date and time */
 						printf( __( '%1$s', 'made-theme' ),
-							sprintf( '<span class="fn">%s says:</span>', get_comment_author_link() )
+							sprintf( '<span class="fn"><span class="comment-author">%s</span> says:</span>', get_comment_author_link() )
 						);
 					?>
 

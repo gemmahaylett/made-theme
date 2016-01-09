@@ -44,6 +44,7 @@
   	<div id="copyright" class="row">
       <div class="col-md-4 col-sm-12 col-xs-12 footer-item-center">
   		&copy; Copyright <?php echo date( 'Y' ); echo '&nbsp;'; echo bloginfo( 'name' ); ?>
+      <span class="credits">DESIGN BY <a href="http://www.octoberink.com/">OCTOBER INK</a> | DEV BY <a href="http://www.gemmahaylett.com/">GEMMA HAYLETT</a> </span>
       </div>
       <div class="col-md-4 col-sm-12 col-xs-12 footer-item-center">
         <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">

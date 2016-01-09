@@ -37,6 +37,7 @@ article.comment {
 	margin-bottom: 12px;
 	.fn,
 	time {
+    text-transform: lowercase;
 		font-style: normal;
 		display: block;
 		clear: right;
@@ -93,4 +94,9 @@ article.comment {
 
 .comment-form-title {
   margin-bottom: 30px;
+}
+
+.comment-author {
+  text-transform: uppercase;
+  letter-spacing: .25em;
 }
