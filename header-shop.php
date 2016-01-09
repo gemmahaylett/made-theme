@@ -59,7 +59,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menu-button">Menu</div>
-            			<nav class="access col-md-10" role="navigation">
+            			<nav class="access col-md-offset-2 col-md-8" role="navigation">
             				<?php wp_nav_menu( array( 
                                 'theme_location' => 'primary',
                                 'menu_class' => 'flexnav', //Adding the class for FlexNav
@@ -68,12 +68,12 @@
                         </nav>
                         <nav class="col-md-2" role="navigation">
                             <ul id="social-header-menu" class="social-media-menu">
-                              <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
-                              <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
-                              <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>"><i class="icon-fixed-width fa fa-pinterest"></i></a></li>
-                              <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
-                              <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
-                              <li><a title="Search" href="/made/search"><i class="icon-fixed-width fa fa-search"></i></a></li>
+                              <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
+                              <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
+                              <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-pinterest"></i></a></li>
+                              <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
+                              <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
+                              <li><a title="Search" href="/made/search"><i class="icon-fixed-width fa fa-search" target="_blank"></i></a></li>
                             </ul>
                         </nav>
                     </div>

@@ -371,7 +371,7 @@
   .flexnav li a {
     position: relative;
     display: block;
-    padding: .6em;
+    padding: .5em .9em;
     z-index: 2;
     color: #828175;
     letter-spacing: .2em;
@@ -464,7 +464,7 @@
       display: block;
       background-color: none;
       overflow: visible;
-      width: 14%; }
+      width: auto; }
     .flexnav li a {
       border-bottom: none; 
       text-transform: uppercase;
