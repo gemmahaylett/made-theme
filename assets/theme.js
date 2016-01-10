@@ -145,12 +145,10 @@
   });
 
   jQuery('.top-slider').owlCarousel({
-    loop: true,
-    slidesToShow: 3,
-    slideBy: 3,
-    lazyLoad : true,
-    autoWidth:true,
+    items: 3,
     margin: 10,
+    slideBy: 3,
+    loop: true,
     nav:true,
     navText: ["",""]
   });

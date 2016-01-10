@@ -94,13 +94,9 @@ get_header( 'shop' ); ?>
 <script>
 ;(function(window) {
 	jQuery('.shop-slider').owlCarousel({
-	    loop: true,
-	    slidesToShow: 1,
-	    slideBy: 1,
-	    lazyLoad : true,
-	    autoWidth:true,
+	    items: 1,
 	    nav:true,
-	    navText: ["",""]
+	    navText: ["",""],
 	  });
 })(window);
 </script>
