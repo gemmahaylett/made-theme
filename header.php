@@ -86,7 +86,12 @@
                   <?php while ( has_sub_field('top_slider', 'options') ) : ?>
                     <div class="item">
                         <a href="<?php the_sub_field('link', 'options'); ?>">
-                            <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                            <?php if( get_sub_field('hover_image', 'options')) { ?>
+                                <img class="hover-image" src="<?php the_sub_field('image', 'options'); ?>"/>
+                                <img class="hover-image" src="<?php the_sub_field('hover_image', 'options'); ?>"/>
+                            <? } else { ?>
+                                <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                            <? } ?>
                         </a>
                     </div>
                   <?php endwhile; ?>

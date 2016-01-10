@@ -9,3 +9,15 @@
 		height: auto;
 	}
 }
+
+.top-slider .item .hover-image:last-child {
+  display: none;
+}
+
+.top-slider .item:hover .hover-image:first-child {
+  display: none;
+}
+
+.top-slider .item:hover .hover-image:last-child {
+  display: inline-block;
+}
