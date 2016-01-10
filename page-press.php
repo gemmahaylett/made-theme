@@ -24,12 +24,20 @@ get_header(); ?>
               <?php if ( get_sub_field('press_item') ) : ?>
                   <?php while ( has_sub_field('press_item') ) : ?>
                     <div class="media-item">
-                      <a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_source'); ?></a>
+                      <?php if ( get_sub_field('press_link')) { ?>
+                        <a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_source'); ?></a>
+                      <?php } else { ?>
+                        <?php the_sub_field('press_source'); ?>
+                      <?php } ?>
                       <?php if ( get_sub_field('press_article') ) : ?>
                         <span>&nbsp|&nbsp</span>
                         <ul>
                         <?php while ( has_sub_field('press_article') ) : ?>
-                          <li><a href="<?php the_sub_field('article_link'); ?>" target="_blank"><?php the_sub_field('article_name'); ?></a></li>
+                          <?php if (get_sub_field('article_link')) { ?>
+                            <li><a href="<?php the_sub_field('article_link'); ?>" target="_blank"><?php the_sub_field('article_name'); ?></a></li>
+                          <?php } else { ?>
+                            <li><?php the_sub_field('article_name'); ?></li>
+                          <?php } ?>
                         <?php endwhile; ?>
                         </ul>
                       <?php endif; ?>

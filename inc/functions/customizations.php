@@ -18,7 +18,6 @@ function made_theme_mce_buttons_2($buttons) {
 	 * Add in a core button that's disabled by default
 	 */
 	$buttons[] = 'justify'; // fully justify text
-	$buttons[] = 'hr'; // insert HR
 
 	return $buttons;
 }
