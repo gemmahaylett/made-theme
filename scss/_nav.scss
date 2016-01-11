@@ -113,7 +113,7 @@
 }
 
 #social-header-menu {
-	margin-left: -60%;
+	margin-left: -170%;
 }
 
 #social-header-menu {
@@ -137,6 +137,12 @@
 
 .nav-previous, .nav-next {
 	margin-bottom: 35px;
+}
+
+@media all and (max-width: 1200px)  {
+	#social-header-menu {
+  	margin-left: -80%;
+	}
 }
 
 @media all and (max-width: 992px)  {

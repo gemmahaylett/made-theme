@@ -21,3 +21,18 @@
 .top-slider .item:hover .hover-image:last-child {
   display: inline-block;
 }
+
+@media all and (max-width: 992px)  { 
+  #site-header .logo img{
+    width: 75%;
+  }
+
+  .shop-circle a img {
+    width: 15%;
+  }
+
+  #site-header .header .logo img {
+    margin-top: 2% !important;
+  }
+}
+

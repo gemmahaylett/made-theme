@@ -30,7 +30,7 @@ get_header(); ?>
 
 		<?php /* Start the Loop */ ?>
 	<section class="grid grid_posts grid--loading">
-		<img class="grid__loader" src="images/grid.svg" width="60" alt="Loader image" />
+		<img class="grid__loader" src="/wp-content/themes/made-theme/assets/images/grid.svg" width="60" alt="Loader image" />
     <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
     <div class="grid__sizer"></div>
 		<?php while ( have_posts() ) : the_post(); ?>

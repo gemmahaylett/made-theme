@@ -59,7 +59,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menu-button">Menu</div>
-            			<nav class="access col-md-offset-2 col-md-8" role="navigation">
+            			<nav class="access col-md-offset-1 col-md-9" role="navigation">
             				<?php wp_nav_menu( array( 
                                 'theme_location' => 'primary',
                                 'menu_class' => 'flexnav', //Adding the class for FlexNav
