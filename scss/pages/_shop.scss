@@ -31,8 +31,8 @@
 .product_list_widget {
   li img {
     float: left;
-    margin-right: 15px;
-    max-width: 4em;
+    margin-right: 0;
+    max-width: 25%;
   }
   .quantity {
     text-align: right;
@@ -233,4 +233,34 @@ table.cart .product-thumbnail {
 
 .widget-area .widget a:hover, .product_list_widget a:hover {
   color: $hover;
+}
+
+.woocommerce-error a, .woocommerce-info a, .woocommerce-message a, .woocommerce-noreviews a, p.no-comments a {
+  letter-spacing: 0;
+}
+
+.widget_shopping_cart .product_list_widget li {
+  padding-left: 0;
+}
+
+.mini_cart_item a div {
+  text-align: right;
+}
+
+@media all and (max-width: 992px) {
+  .widget.woocommerce .button {
+    padding: 1%;
+  }
+}
+
+@media all and (max-width: 770px)  { 
+  .single-product div.product {
+    .images {
+      width: 100%;
+    }
+
+    .summary {
+      width: 100%;
+    }
+  }
 }

@@ -14,9 +14,10 @@
 if ( ! function_exists( 'storefront_before_content' ) ) {
 	function storefront_before_content() {
 		?>
-			<main id="main" class="site-main" role="main">
-	    	<?php do_action( 'storefront_sidebar' ); ?>
-	    	<div id="primary" class="col-md-9 col-sm-12 col-sm-12 content-area">
+			<main class="site-main container clearfix" role="main">
+				<div class="row">
+	    	
+	    	<div id="primary" class="col-md-9 col-md-push-3 content-area">
 	<?php }
 }
 
@@ -29,8 +30,11 @@ if ( ! function_exists( 'storefront_before_content' ) ) {
 if ( ! function_exists( 'storefront_after_content' ) ) {
 	function storefront_after_content() {
 		?>
-			</main><!-- #main -->
+				</div>
+				<?php do_action( 'storefront_sidebar' ); ?>
+
 		</div><!-- #primary -->
+		</main><!-- #main -->
 
 		<?php 
 	}

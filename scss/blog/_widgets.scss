@@ -177,14 +177,14 @@
   }
 
   #social-sidebar-menu li {
-    margin-left: 10px;
+    margin-left: 9px;
   }
 }
 
 @media all and (min-width: 700px) and (max-width: 992px)  { 
   .email-subscribe, .newsletter-subscribe {
     input {
-      width: 93%;
+      width: 92%;
     }
   }
 }
@@ -199,10 +199,18 @@
   }
 }
 
-@media all and (max-width: 700px)  { 
+@media all and (min-width: 420px) and (max-width: 700px)  { 
   .email-subscribe, .newsletter-subscribe {
     input {
       width: 87%;
+    }
+  }
+}
+
+@media all and (max-width: 420px)  { 
+  .email-subscribe, .newsletter-subscribe {
+    input {
+      width: 80%;
     }
   }
 }
