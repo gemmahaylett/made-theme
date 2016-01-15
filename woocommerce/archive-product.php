@@ -96,6 +96,7 @@ get_header( 'shop' ); ?>
 	jQuery('.shop-slider').owlCarousel({
 	    items: 1,
 	    nav:true,
+	    loop: true,
 	    navText: ["",""],
 	  });
 })(window);

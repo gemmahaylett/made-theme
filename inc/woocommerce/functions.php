@@ -134,3 +134,8 @@ function storefront_products_per_page() {
 function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
 	return class_exists( $extension ) ? true : false;
 }
+
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url() {
+    return 'http://www.dev.danamadeit.com/shop';
+}
