@@ -179,6 +179,10 @@ audio:not([controls]) {
   display: none;
 }
 
+embed {
+  width: 100%;
+}
+
 /* 2C FORMS
 Based on the Bootstrap toolkit from Twitter http://twitter.github.com/bootstrap */
 

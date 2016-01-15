@@ -147,21 +147,50 @@
   jQuery('.top-slider').owlCarousel({
     items: 3,
     margin: 10,
-    slideBy: 3,
     loop: true,
-    nav:true,
-    navText: ["",""]
+    navText: ["",""],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            slideBy: 1
+        },
+        500:{
+            items:3,
+            nav:true,
+            slideBy: 3
+        },
+        1600:{
+            items:4,
+            nav:true,
+            slideBy: 4
+        }
+    }
   });
 
   jQuery('.top-slider').show();
 
   var bslider = jQuery('.bottom-slider');
   bslider.owlCarousel({
+    items: 3,
     loop: true,
-    slidesToShow: 1,
-    slideBy: 3,
     margin: 10,
-    autoWidth:true
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            slideBy: 1
+        },
+        500:{
+            items:2,
+            slideBy: 2
+        },
+        1200:{
+            items:3,
+            slideBy: 3
+        }
+    }
   });
 
   jQuery('.bs-next').click(function() {

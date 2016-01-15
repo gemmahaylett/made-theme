@@ -45,6 +45,10 @@
 	li {
 		list-style: none;
 		display: inline-block;
+
+		a {
+			color: $medium-gray;
+		}
 	}
 }
 
@@ -74,8 +78,20 @@
 	}
 
 	i.fa-facebook {
-		padding-left: 19px;
-    padding-right: 16px;
+		padding-left: 20px;
+    padding-right: 17px;
+	}
+
+	i.fa-instagram {
+		padding: 15px 13px 15px 17px;
+	}
+
+	i.fa-pinterest {
+		padding: 15px 14px 15px 17px;
+	}
+
+	i.fa-youtube-play {
+		padding: 15px 13px 15px 14px;
 	}
 }
 

@@ -24,7 +24,7 @@
     <title><?php wp_title( '', true, 'right' ); ?></title>
     
     <!-- favicon & links -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/made-sec.png" type="image/x-icon">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     <!-- stylesheets are enqueued via functions.php -->
@@ -59,7 +59,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menu-button">Menu</div>
-            			<nav class="access col-md-offset-1 col-md-9" role="navigation">
+            			<nav class="access col-md-10" role="navigation">
             				<?php wp_nav_menu( array( 
                                 'theme_location' => 'primary',
                                 'menu_class' => 'flexnav', //Adding the class for FlexNav
