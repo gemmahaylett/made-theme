@@ -81,6 +81,7 @@
                   
             </div>
 
+            <?php if (is_front_page()) : ?>
             <div class="top-slider">
                 <?php if ( get_field('top_slider', 'options') ) : ?>
                   <?php while ( has_sub_field('top_slider', 'options') ) : ?>
@@ -97,6 +98,7 @@
                   <?php endwhile; ?>
                 <?php endif; ?>
             </div>
+        <?php endif; ?>
 
 		</header><!-- #branding -->
 
