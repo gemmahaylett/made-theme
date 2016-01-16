@@ -42,3 +42,19 @@ get_header( 'shop' ); ?>
 	?>
 
 <?php get_footer( 'shop' ); ?>
+
+<script>
+;(function(window) {
+	debugger;
+	jQuery(".thumbnails").find("a.zoom").unbind('click');
+	jQuery('.thumbnails .zoom').on('click', function(e){
+	    e.preventDefault();
+	    var photo_fullsize =  jQuery(this).attr('href');
+	    console.log( photo_fullsize );
+	    jQuery('.woocommerce-main-image img').attr('src', photo_fullsize);
+	    jQuery('.woocommerce-main-image img').attr('srcset', photo_fullsize);
+	    jQuery('a.woocommerce-main-image').attr('href', photo_fullsize);
+	    return false;
+	 });
+})(window);
+</script>
