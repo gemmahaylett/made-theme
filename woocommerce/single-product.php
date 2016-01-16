@@ -45,7 +45,6 @@ get_header( 'shop' ); ?>
 
 <script>
 ;(function(window) {
-	debugger;
 	jQuery(".thumbnails").find("a.zoom").unbind('click');
 	jQuery('.thumbnails .zoom').on('click', function(e){
 	    e.preventDefault();
