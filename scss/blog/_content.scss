@@ -21,6 +21,7 @@ h1.entry-title a, h4.entry-title a {
 
 h4.entry-title {
   margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .entry-meta {
@@ -67,8 +68,16 @@ h4.entry-title {
   }
 }
 
-.grid_posts .grid__item {
-  text-align: left;
+.grid_posts .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid_posts .flex-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+  padding-right: 4px;
   img {
     width: 100%;
   }

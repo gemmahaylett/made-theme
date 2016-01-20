@@ -239,6 +239,12 @@ table.cart .product-thumbnail {
   letter-spacing: 0;
 }
 
+.woocommerce .return-to-shop .wc-backward{
+  padding: 15px;
+  background-color: $yellow;
+  text-transform: uppercase;
+}
+
 .widget_shopping_cart .product_list_widget li {
   padding-left: 0;
 }

@@ -9,37 +9,33 @@
  */
 
 get_header(); ?>
-
 <section id="primary" role="main" class="col col-md-8">
+	<div class="filter">
 	<?php if (is_category( )) {
 	  $cat = get_query_var('cat');
 	  $curcat = get_category ($cat);
 		$args = array('categories' => $curcat->term_id);
 		$tags = get_category_tags($args); 
-		if(!empty($tags)) {
-			echo '<div class="filter">';
-			if($_GET['tag']){
-				echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item" data-filter="*">All</a>';
-			}
-			else {
-				echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item filter__item--selected" data-filter="*">All</a>';
-			}
-
-			foreach ($tags as $tag) {
-			    echo '<a href="/category/'.$curcat->category_nicename.'?tag=';
-			    echo str_replace(' ', '_', $tag->tag_id);
-			    if($_GET['tag'] == $tag->tag_id){
-			    	echo '" class=\'action filter__item filter__item filter__item--selected\' data-filter=\'.';
-			    }
-			    else {
-			    	echo '" class=\'action filter__item filter__item\' data-filter=\'.';
-			    }
-			    echo str_replace(' ', '_', $tag->tag_name);
-			    echo '\'>'.$tag->tag_name.'</a>';
-			}
-			echo '</div>';
+		if($_GET['tag']){
+			echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item" data-filter="*">All</a>';
+		}
+		else {
+			echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item filter__item--selected" data-filter="*">All</a>';
+		}
+		foreach ($tags as $tag) {
+	    echo '<a href="/category/'.$curcat->category_nicename.'?tag=';
+	    echo str_replace(' ', '_', $tag->tag_id);
+	    if($_GET['tag'] == $tag->tag_id){
+	    	echo '" class=\'action filter__item filter__item filter__item--selected\' data-filter=\'.';
+	    }
+	    else {
+	    	echo '" class=\'action filter__item filter__item\' data-filter=\'.';
+	    }
+	    echo str_replace(' ', '_', $tag->tag_name);
+	    echo '\'>'.$tag->tag_name.'</a>';
 		}
 	}?>
+	</div>
 
 	<?php 
 

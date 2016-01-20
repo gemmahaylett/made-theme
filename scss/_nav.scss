@@ -151,8 +151,26 @@
   font-size: 1em;
 }
 
+.sub-menu {
+	display: none;
+}
+
 .nav-previous, .nav-next {
 	margin-bottom: 35px;
+}
+
+.filter {
+	text-align: center;
+}
+
+.filter ul {
+	display: inline-block;
+	list-style: none;
+}
+
+.filter ul li {
+	float: left;
+	margin: 0 10px;
 }
 
 @media all and (max-width: 1200px)  {

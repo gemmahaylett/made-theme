@@ -86,18 +86,6 @@ function made_theme_scripts() {
     get_template_directory_uri() . '/assets/vendor/instafeed.min.js',
     array('jquery')
   );
-
-   wp_enqueue_script(
-    'vendor-isotope',
-    get_template_directory_uri() . '/assets/vendor/isotope.pkgd.min.js',
-    array('jquery')
-  );
-
-  wp_enqueue_script(
-    'vendor-flickity',
-    get_template_directory_uri() . '/assets/vendor/flickity.pkgd.min.js',
-    array('jquery')
-  );
   
 	// vendor scripts
 	wp_enqueue_script(
@@ -154,6 +142,7 @@ include('inc/functions/comments.php');
 // Widgets
 include_once( 'inc/widget-about.php' );
 include_once( 'inc/widget-form.php' );
+include_once( 'inc/widget-feedform.php' );
 include_once( 'inc/widget-link.php' );
 include_once( 'inc/widget-popular-posts.php' );
 include_once( 'inc/widget-instagram.php' );

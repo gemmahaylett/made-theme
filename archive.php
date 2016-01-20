@@ -32,7 +32,6 @@ get_header(); ?>
 	<section class="grid grid_posts grid--loading">
 		<img class="grid__loader" src="/wp-content/themes/made-theme/assets/images/grid.svg" width="60" alt="Loader image" />
     <!-- Grid sizer for a fluid Isotope (Masonry) layout -->
-    <div class="grid__sizer"></div>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'grid' ); ?>
