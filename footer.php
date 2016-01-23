@@ -49,7 +49,7 @@
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12 footer-item-center">
           <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png'" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png'" alt="<?php bloginfo('name'); ?>">
           </a>
         </div>
         <nav class="col-md-4 col-sm-4 col-xs-12 footer-item-center" role="navigation">

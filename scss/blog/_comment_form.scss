@@ -20,7 +20,6 @@
 	#{$all-text-inputs}, 
 	textarea {
 		position: relative;
-		float: left;
 		display: inline-block;
 	}
 	#{$all-text-inputs} {
@@ -33,7 +32,6 @@
 		resize: vertical;
 	}
 	.form-submit {
-	  float: left;
 	  margin: 0 0;
 	}
 	input[type=submit] {

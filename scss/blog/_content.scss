@@ -2,7 +2,7 @@
 h1.entry-title a {
 	clear: both;
 	color: $links;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-family: $header-pri;
   letter-spacing: .2em;
   color: $red;
@@ -91,9 +91,13 @@ h4.entry-title {
 
 .related-post-item { 
   padding-right: 15px;
+  margin-bottom: 30px;
   .entry-category {
     text-align: center;
     span { padding: 0; }
+  }
+  h4.entry-title {
+    margin-bottom: 0px;
   }
 }
 
@@ -126,6 +130,13 @@ h4.entry-title {
 
   h4 {
     margin-top: 15px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .entry-title,
+  h1.entry-title a {
+    font-size: 1.3em;
   }
 }
 

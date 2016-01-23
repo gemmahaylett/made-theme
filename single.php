@@ -15,22 +15,25 @@ get_header(); ?>
 
 		<?php comments_template( '', true ); ?>
 
+    <?php get_template_part( 'inc/pagination-title' ); ?>
+
     <?php 
-      $tags = wp_get_post_tags($post->ID);
-      if ($tags) {
-        $first_tag = $tags[0]->term_id;
+      $cat = wp_get_post_categories($post->ID);
+      if ($cat) {
+        $first_cat = $cat[0];
         $args=array(
-          'tag__in' => array($first_tag),
+          'category' => array($first_cat),
           'post__not_in' => array($post->ID),
           'posts_per_page'=>4,
           'caller_get_posts'=>1);
+        $postsInCat = get_term_by('id',$first_cat,'category');
       } ?>
 
     <?php  $related = get_posts( $args );
       if( !empty($related) ) {?>
-    <div class="favorites clearfix">
+    <div class="favorites row clearfix">
       <h3>MORE FAVORITES</h3>
-        <div class="related-posts" data-columns>
+        <div class="related-posts col-md-12" data-columns>
           <?php
            foreach( $related as $post ) {
             setup_postdata($post); 
@@ -43,14 +46,13 @@ get_header(); ?>
     <?php } ?>
 
     <?php 
-      if (get_posts_count_by_tag($tags[0]->name) > 4) { ?>
+      if ($postsInCat->count > 4) { ?>
       <div class="show-more">
         <button href="#" class="show-more-btn"></button>
       </div>
       <?php } ?>
 
 	<?php endwhile; // end of the loop. ?>
-
 </section><!-- #primary -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

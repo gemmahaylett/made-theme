@@ -70,12 +70,18 @@ function my_ajax_pagination() {
   $post_id = json_decode( stripslashes( $_POST['post_id'] ), true );
 
   //get tag info
-  $tags = wp_get_post_tags( $post_id );
+  $cat = wp_get_post_categories($post_id);
   $offset = $_POST['offset'];
-  $posts = new WP_Query( array( 'posts_per_page' => 1, 'post__not_in' => array($post_id), 'offset' => $offset, 'tag__in' => array($tags[0]->term_id) ) );
+  $posts = new WP_Query( 
+   array( 
+    'posts_per_page' => 1, 
+    'post__not_in' => array($post_id), 
+    'offset' => $offset, 
+    'cat' => array($cat[0]) ) 
+   );
  // $posts = new WP_Query( $query_vars );
   $GLOBALS['wp_query'] = $posts;
-  $tag_count = get_posts_count_by_tag($tags[0]->term_id);
+  $postsInCat = get_term_by('id',$cat[0],'category');
 
   if( $posts->have_posts() ) {
     while ( $posts->have_posts() ) { 
@@ -84,21 +90,10 @@ function my_ajax_pagination() {
     }
   }
 
-  if($_POST['offset']+1 >= $tag_count ) {
+  if($_POST['offset']+1 >= $postsInCat->count ) {
     echo '<div id="show-more-hide"></div>';
   }
   die();
-}
-
-function get_posts_count_by_tag($tag_name)
-{
-    $tags = get_tags(array ('search' => $tag_name) );
-    foreach ($tags as $tag) {
-      if ($tag->name == $tag_name) {
-         return $tag->count;
-      }
-    }
-    return 0;
 }
 
 require get_template_directory() . '/inc/init.php';

@@ -173,6 +173,24 @@
 	margin: 0 10px;
 }
 
+#post-nav-below {
+	.nav-previous, .nav-next {
+		float: none;
+		width: 100%;
+		text-align: left;
+		margin-bottom: 5px;
+
+		a {
+			color: $red;
+		}
+	}
+
+	h3{
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+}
+
 @media all and (max-width: 1200px)  {
 	#social-header-menu {
   	margin-left: -80%;
@@ -182,5 +200,8 @@
 @media all and (max-width: 992px)  {
 	#social-header-menu {
   	margin-left: 0;
+  	li {
+  		padding: 1em 3%;
+  	}
 	}
 }

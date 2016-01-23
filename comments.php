@@ -70,3 +70,9 @@
 	      	
 </div>
 </div><!-- #comments -->
+
+<script>
+	;(function(window) {
+		jQuery(".comment.depth-1").append("<hr>");
+	})(window);
+</script>

@@ -122,7 +122,51 @@
 
         if(jQuery('#show-more-hide')){
           jQuery('.show-more-btn').hide();
-        }  
+        }
+      }
+    });
+
+    jQuery.ajax({
+      url: ajaxpagination.ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajax_pagination',
+        query_vars: ajaxpagination.query_vars,
+        post_id: ajaxpagination.post_id,
+        offset: offset + 3
+      },
+      success: function( html ) {
+        var grid = document.querySelector('.related-posts');
+        var item = document.createElement('article');
+        salvattore.appendElements(grid, [item]);
+        item.outerHTML = html;
+        offset = offset + 3; 
+
+        if(jQuery('#show-more-hide')){
+          jQuery('.show-more-btn').hide();
+        }
+      }
+    });
+
+    jQuery.ajax({
+      url: ajaxpagination.ajaxurl,
+      type: 'post',
+      data: {
+        action: 'ajax_pagination',
+        query_vars: ajaxpagination.query_vars,
+        post_id: ajaxpagination.post_id,
+        offset: offset + 4
+      },
+      success: function( html ) {
+        var grid = document.querySelector('.related-posts');
+        var item = document.createElement('article');
+        salvattore.appendElements(grid, [item]);
+        item.outerHTML = html;
+        offset = offset + 4; 
+
+        if(jQuery('#show-more-hide')){
+          jQuery('.show-more-btn').hide();
+        }
       }
     });
   });

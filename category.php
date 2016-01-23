@@ -11,50 +11,6 @@
 get_header(); ?>
 
 <section id="primary" role="main" class="col col-md-8">
-	<?php if (is_category( )) {
-	  $cat = get_query_var('cat');
-	  $curcat = get_category ($cat);
-		$args = array('categories' => $curcat->term_id);
-		$tags = get_category_tags($args); 
-		if(!empty($tags)) {
-			echo '<div class="filter">';
-			if($_GET['tag']){
-				echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item" data-filter="*">All</a>';
-			}
-			else {
-				echo '<a href="/category/'.$curcat->category_nicename.'" class="action filter__item filter__item--selected" data-filter="*">All</a>';
-			}
-
-			foreach ($tags as $tag) {
-			    echo '<a href="/category/'.$curcat->category_nicename.'?tag=';
-			    echo str_replace(' ', '_', $tag->tag_id);
-			    if($_GET['tag'] == $tag->tag_id){
-			    	echo '" class=\'action filter__item filter__item filter__item--selected\' data-filter=\'.';
-			    }
-			    else {
-			    	echo '" class=\'action filter__item filter__item\' data-filter=\'.';
-			    }
-			    echo str_replace(' ', '_', $tag->tag_name);
-			    echo '\'>'.$tag->tag_name.'</a>';
-			}
-			echo '</div>';
-		}
-	}?>
-
-	<?php 
-
-	  if($_GET['tag']) {
-	    $args = array(
-	      'category__in' => $curcat->term_id, 
-	      //'nopaging' => false, 
-	      'tag__in' =>  $_GET['tag'], //must use tag id for this field
-	      'posts_per_page' => -1
-			); //get all posts
-
-			$wp_query = new WP_Query( $args );
-		}
-		
-		?>
 
 		<?php if ( $wp_query->have_posts() ) : ?>
 

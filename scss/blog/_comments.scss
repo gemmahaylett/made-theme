@@ -59,10 +59,29 @@ article.comment {
 	}
 }
 
+#respond .comment-form-author {
+  float: left;
+  width: 48%;
+  margin-right: 2% !important;
+
+  input{
+    width: 100% !important;
+  }
+}
+
+#respond .comment-form-email {
+  float: left;
+  width: 50%;
+
+  input {
+    width: 100% !important;
+  }
+}
+
 /* Post author highlighting */
 .commentlist > li.bypostauthor, 
 .commentlist .children > li.bypostauthor {
-	border: $border;
+	//border: $border;
 	padding: 5px 10px;
 }
 
@@ -96,7 +115,28 @@ article.comment {
   margin-bottom: 30px;
 }
 
-.comment-author {
+.comment-author, .comment-author a {
   text-transform: uppercase;
   letter-spacing: .25em;
+  color: $yellow;
+}
+
+.comment-reply-link {
+  text-transform: uppercase;
+}
+
+.comment hr {
+  margin: 1em 0;
+}
+
+.bypostauthor span.comment-author::before {
+  content: '\f004';
+  font-family: FontAwesome;
+  padding-right: 5px;
+  color: $red;
+  font-size: 1em;
+}
+
+.bypostauthor span.comment-author {
+  color: $red;
 }
