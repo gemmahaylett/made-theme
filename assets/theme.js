@@ -120,7 +120,7 @@
         item.outerHTML = html;
         offset = offset + 2; 
 
-        if(jQuery('#show-more-hide')){
+        if(jQuery('#show-more-hide').length > 0){
           jQuery('.show-more-btn').hide();
         }
       }
@@ -142,7 +142,7 @@
         item.outerHTML = html;
         offset = offset + 3; 
 
-        if(jQuery('#show-more-hide')){
+        if(jQuery('#show-more-hide').length > 0){
           jQuery('.show-more-btn').hide();
         }
       }
@@ -164,7 +164,7 @@
         item.outerHTML = html;
         offset = offset + 4; 
 
-        if(jQuery('#show-more-hide')){
+        if(jQuery('#show-more-hide').length > 0){
           jQuery('.show-more-btn').hide();
         }
       }
