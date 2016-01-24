@@ -191,6 +191,16 @@
 	}
 }
 
+#menu-tutorial-categories, #menu-recipe-categories {
+	.current-menu-item a {
+		color: $yellow;
+	}
+	a {
+		color: $medium-gray;
+		text-transform: uppercase;
+	}
+}
+
 @media all and (max-width: 1200px)  {
 	#social-header-menu {
   	margin-left: -80%;

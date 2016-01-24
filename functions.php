@@ -33,7 +33,9 @@ function made_theme_setup() {
 	register_nav_menus( 
     array('primary' => __( 'Primary Menu', 'made-media' ),
           'social-media' => __( 'Social Media Menu', 'made-media'),
-          'footer' => __( 'Footer Menu', 'made-media')
+          'footer' => __( 'Footer Menu', 'made-media'),
+          'recipe-cat' => __( 'Recipe Categories', 'made-media'),
+          'tutorial-cat' => __( 'Tutorial Categories', 'made-media')
   ));
 	
 	// Add featured image support
@@ -106,6 +108,13 @@ function made_theme_scripts() {
     array('jquery'),
     '1.0.0',
     true
+  );
+
+  wp_enqueue_script( 'featherlight',  
+    get_stylesheet_directory_uri() . '/assets/vendor/featherlight.min.js', 
+    array( 'jquery' ), 
+    '1.0', 
+    true 
   );
 
   wp_enqueue_script( 'ajax-pagination',  
