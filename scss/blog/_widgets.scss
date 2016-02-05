@@ -33,17 +33,26 @@
 .widget_search {
 	form {
 		margin: 0 0 10px;
+    label {
+      position: absolute;
+      left: 25px;
+      top: 8px;
+    }
 	}
 	#s {
 		width: 100%;
 		display: inline-block;
+    padding-left: 30px;
 	}
 }
 
-.widget_search #s::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f002  '; color: $medium-gray }
-.widget_search #s::-moz-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray } /* firefox 19+ */
-.widget_search #s:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray } /* ie */
-.widget_search #s:-moz-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray }
+/*.widget_search #s::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f002  '; color: $medium-gray }
+.widget_search #s::-moz-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray } 
+.widget_search #s:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray } 
+.widget_search #s:-moz-placeholder::before  { font-family: fontAwesome; content:'\f002  '; color: $medium-gray } */
+
+.fa-search::before { font-family: fontAwesome; content:'\f002  '; color: $medium-gray }
+
 
 .about-widget {
   border: $border;
@@ -145,10 +154,10 @@
 }
 
 #social-sidebar-menu {
-  margin-left: -18px !important;
+  margin-left: -16px !important;
 
   li {
-    margin-left: 18px;
+    margin-left: 16px;
   }
 }
 
@@ -181,9 +190,13 @@
     }
   }
 
-  #social-sidebar-menu li {
-    margin-left: 9px;
+  #social-sidebar-menu {
+    margin-left: -7px!important;
+    li {
+      margin-left: 5px;
+    }
   }
+  
 }
 
 @media all and (min-width: 700px) and (max-width: 992px)  { 

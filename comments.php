@@ -64,7 +64,7 @@
 			 'comment_notes_before' => '',
 			 'label_submit' => 'COMMENT',
 			 'fields' => $fields,
-			 'comment_field' => '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea>'
+			 'comment_field' => '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="COMMENT"></textarea>'
 		 ) 
 	); ?>
 	      	

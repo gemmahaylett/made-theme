@@ -90,6 +90,8 @@ class made_theme_about_widget extends WP_Widget {
     <textarea class="widefat" id="<?php echo $this->get_field_id( 'about_text' ); ?>" name="<?php echo $this->get_field_name( 'about_text' ); ?>" type="text"><?php echo esc_attr( $about_text ); ?></textarea>
     <label for="<?php echo $this->get_field_id( 'about_btn' ); ?>"><?php _e( 'About Btn Text:' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'about_btn' ); ?>" name="<?php echo $this->get_field_name( 'about_btn' ); ?>" type="text" value="<?php echo esc_attr( $about_btn ); ?>" />
+    <label for="<?php echo $this->get_field_id( 'about_link' ); ?>"><?php _e( 'About Link Text:' ); ?></label> 
+    <input class="widefat" id="<?php echo $this->get_field_id( 'about_link' ); ?>" name="<?php echo $this->get_field_name( 'about_link' ); ?>" type="text" value="<?php echo esc_attr( $about_link ); ?>" />
     </p>
     <?php 
   }
