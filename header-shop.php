@@ -59,21 +59,26 @@
                 <div class="container">
                     <div class="row">
                         <div class="menu-button">Menu</div>
-            			<nav class="access col-md-10" role="navigation">
+            			<nav class="access col-md-12" role="navigation">
             				<?php wp_nav_menu( array( 
                                 'theme_location' => 'primary',
                                 'menu_class' => 'flexnav', //Adding the class for FlexNav
                                 'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
                             )); ?>
-                        </nav>
-                        <nav class="col-md-2" role="navigation">
-                            <ul id="social-header-menu" class="social-media-menu">
+                          <ul id="social-header-menu" class="social-media-menu">
                               <li><a title="Facebook" href="<?php the_field( 'facebook', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
                               <li><a title="Instagram" href="<?php the_field( 'instagram', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-instagram"></i></a></li>
                               <li><a title="Pinterest" href="<?php the_field( 'pinterest', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-pinterest"></i></a></li>
                               <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
                               <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
-                              <li><a title="Search" href="/made/search"><i class="icon-fixed-width fa fa-search" target="_blank"></i></a></li>
+                              <li class="search-form">
+                                <form method="get" id="searchform-header" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                  <input type="text" class="field" name="s" id="search-header" />
+                                  <input type="submit" class="submit hidden" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'SEARCH', 'made-theme' ); ?>" />
+                                  <label for="s"><i class="fa fa-search"></i></label>
+                                </form>
+                              </li>
+                              <li class="search-icon"><a title="Search" href="/made/search"><i class="icon-fixed-width fa fa-search"></i></a></li>
                             </ul>
                         </nav>
                     </div>

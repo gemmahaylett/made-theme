@@ -10,9 +10,10 @@ h1.entry-title a {
 }
 h4.entry-title a {
   font-size: 0.75em;
-  font-family: $header-pri;
+  font-family: $main;
+  font-weight: 500;
   letter-spacing: .2em;
-  color: $red;
+  color: $dark-gray;
 }
 
 h1.entry-title a, h4.entry-title a {
@@ -121,11 +122,14 @@ h4.entry-title {
 }
 
 .favorites {
+  clear: both;
   border-top: 1px solid $medium-gray;
-  margin-top: 5%;
+  margin-top: 15%;
 
   h3 {
     margin: 3.5% 0;
+    font-family: $main;
+    font-weight: 500;
   }
 
   h4 {

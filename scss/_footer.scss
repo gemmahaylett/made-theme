@@ -16,7 +16,7 @@
 
 #footer{
   background: $blue;
-  padding: 5%;
+  padding: 5% 5% 1% 5%;
 }
 
 .footer-item-center {
@@ -47,7 +47,13 @@
 }
 
 .credits {
-  font-size: 0.6em;
+  font-size: 0.75em;
+  margin-top: 60px;
+  font-weight: 700;
+  letter-spacing: .5em;
+  color: white;
+  text-align: center;
+
   a {
     color: white;
     letter-spacing: .5em;

@@ -29,10 +29,13 @@
 		
 		<ul class="comments-footer">
 			<li class="comments-link">
+				<span><?php comments_number( 'no comments yet', '1 comment', '% comments' ); ?></span>
+			</li>
+			<li class="comments-link">
 				<?php comments_popup_link( 
-					 __( 'Leave a comment +', 'made-theme' ), 
-					 __( 'Leave a comment +', 'made-theme' ), 
-					 __( 'Leave a comment +', 'made-theme' ) ); 
+					 __( 'Leave a comment', 'made-theme' ), 
+					 __( 'Leave a comment', 'made-theme' ), 
+					 __( 'Leave a comment', 'made-theme' ) ); 
 				?>
 			</li>
 			<li class="share-love">

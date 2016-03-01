@@ -20,7 +20,7 @@ get_header(); ?>
 
 		<?php endwhile; // end of the loop. ?>
 
-    <div class="about-grid">
+    <section class="about-grid row">
     <?php if ( get_field('about_box') ) : ?>
       <?php while ( has_sub_field('about_box') ) : ?>
         <div class="about-box">
@@ -28,7 +28,7 @@ get_header(); ?>
         </div>
       <?php endwhile; ?>
     <?php endif; ?>
-    </div>
+    </section>
 
     <?php if ( get_field('about_bottom_content') ) : ?>    
       <?php the_field('about_bottom_content'); ?>

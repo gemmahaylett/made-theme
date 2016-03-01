@@ -10,7 +10,7 @@
  * @package Made_Theme
  */
 ?>
-<div id="comments" class="row">
+<div class="row">
 	<div class="col-md-12">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'made-theme' ); ?></p>
@@ -53,6 +53,7 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'made-theme' ); ?></p>
 	<?php endif; ?>
 	
+	<div id="comments">
 	<?php 
 	$fields = array (
 		'author' => '<p class="comment-form-author"><input id="author" placeholder="Name" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
@@ -67,6 +68,7 @@
 			 'comment_field' => '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="COMMENT"></textarea>'
 		 ) 
 	); ?>
+	</div>
 	      	
 </div>
 </div><!-- #comments -->

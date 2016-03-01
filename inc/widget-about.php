@@ -24,8 +24,8 @@ class made_theme_about_widget extends WP_Widget {
     
     echo $before_widget;
     echo '<div class="about-widget">';
-    if ( get_field('widget_img', 'widget_' . $widget_id) )
-    $link_img = get_field('widget_img', 'widget_' . $widget_id);
+    if ( get_field('about_image', 'widget_' . $widget_id) )
+    $link_img = get_field('about_image', 'widget_' . $widget_id);
     echo '<img class="image-circle" src=\'' . $link_img . '\'>'; 
 
     if ( ! empty( $title ) )

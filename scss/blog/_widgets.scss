@@ -35,14 +35,14 @@
 		margin: 0 0 10px;
     label {
       position: absolute;
-      left: 25px;
-      top: 8px;
+      right: 25px;
+      top: 45px;
     }
 	}
 	#s {
 		width: 100%;
 		display: inline-block;
-    padding-left: 30px;
+    padding-left: 15px;
 	}
 }
 
@@ -97,6 +97,7 @@
   input {
     border: none;
     width: 83%;
+    vertical-align: middle;
   }
 
   .btn {
@@ -105,6 +106,7 @@
     border: none;
     padding: 14px;
     margin-left: 6px;
+    vertical-align: middle;
   }
 }
 
@@ -116,6 +118,17 @@
   background: url('assets/images/yellow-arrow-btn.png') no-repeat;
 }
 
+.newsletter-subscribe input {
+  width: 100%;
+}
+
+.mimi_field {
+  display: inline-block;
+}
+
+.mimi_field.required {
+  width: 83%;
+}
 
 .email-subscribe {
   background-color: $light-gray;
@@ -154,13 +167,65 @@
 }
 
 #social-sidebar-menu {
-  margin-left: -16px !important;
+  margin-left: -11px !important;
 
   li {
-    margin-left: 16px;
+    margin-left: 11px;
+    text-align: center;
+    font-size: 32px;
+
+    .icon-fixed-width::before {
+      color: white;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      vertical-align: middle;
+      padding: 18px;
+    }
+
+    .icon-fixed-width.fa-facebook {
+      background: $red;
+    }
+
+    .icon-fixed-width.fa-youtube-play {
+      background: $orange;
+    }
+
+    .icon-fixed-width.fa-instagram {
+      background: $dark-yellow;
+    }
+
+    .icon-fixed-width.fa-pinterest-p {
+      background: $light-gray;
+    }
+
+    .icon-fixed-width.fa-facebook::before {
+      padding-left: 25px;
+      padding-right: 17px;
+    }
+
+    .icon-fixed-width.fa-instagram::before {
+      
+      padding-left: 21px;
+      padding-right: 15px;
+    }
+
+    .icon-fixed-width.fa-pinterest-p::before {
+      padding-left: 23px;
+      padding-right: 14px;
+    }
+
+    .icon-fixed-width.fa-youtube-play::before {
+      padding-left: 17px;
+      padding-right: 11px;
+    }
+
+    
+
+    
   }
 }
-
 #s {
   text-transform: uppercase;
   border-color: $light-gray;
@@ -181,29 +246,39 @@
 
 /* Media Queries */
 @media all and (min-width: 992px) and (max-width: 1198px)  { 
-  .email-subscribe, .newsletter-subscribe {
+  .email-subscribe {
     input {
       width: 80%;
     }
+  }
+
+  .email-subscribe, .newsletter-subscribe {
     h3 {
       padding: 0 13%;
     }
   }
 
+  .mimi_field.required {
+    width: 80%;
+  }
+
   #social-sidebar-menu {
     margin-left: -7px!important;
     li {
-      margin-left: 5px;
+      margin-left: 3px;
     }
   }
-  
 }
 
 @media all and (min-width: 700px) and (max-width: 992px)  { 
-  .email-subscribe, .newsletter-subscribe {
+  .email-subscribe{
     input {
       width: 92%;
     }
+  }
+
+  .mimi_field.required {
+    width: 92%;
   }
 }
 
@@ -218,10 +293,14 @@
 }
 
 @media all and (min-width: 420px) and (max-width: 700px)  { 
-  .email-subscribe, .newsletter-subscribe {
+  .email-subscribe {
     input {
       width: 87%;
     }
+  }
+
+  .mimi_field.required {
+    width: 87%;
   }
 }
 
@@ -230,6 +309,10 @@
     input {
       width: 80%;
     }
+  }
+
+  .mimi_field.required {
+    width: 80%;
   }
 }
 

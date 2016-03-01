@@ -139,3 +139,25 @@ add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' )
 function woo_custom_breadrumb_home_url() {
     return 'http://www.dev.danamadeit.com/shop';
 }
+
+/* Remove Woocommerce User Fields */
+add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
+add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
+
+function custom_override_billing_fields( $fields ) {
+	unset($fields['billing_phone']);
+	unset($fields['billing_company']);
+  return $fields;
+}
+
+function custom_override_shipping_fields( $fields ) {
+  unset($fields['shipping_state']);
+  unset($fields['shipping_country']);
+  unset($fields['shipping_company']);
+  unset($fields['shipping_address_1']);
+  unset($fields['shipping_address_2']);
+  unset($fields['shipping_postcode']);
+  unset($fields['shipping_city']);
+  return $fields;
+}
+/* End - Remove Woocommerce User Fields */

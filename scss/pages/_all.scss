@@ -7,6 +7,10 @@
 	}
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 .header {
   text-align: center;
 }
@@ -44,6 +48,7 @@ hr {
 
 .header .logo img {
   margin-top: -45px;
+  width: 57%;
 }
 
 /* Top Slider */

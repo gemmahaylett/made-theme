@@ -29,14 +29,25 @@ class made_theme_form_widget extends WP_Widget {
     echo $before_widget; ?>
     
       <!-- ALL CONTENT WITHIN THE WIDGET GOES HERE -->
-      
+    
+
+
     <div class="<?php echo $form_class;?>"> 
       <h3><?php echo $title;?></h3>             
-      <form class="input_group" action="<?php echo $form_action?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>  
-        <input type="text" name="EMAIL"/>
-        <button type="submit" class="btn"></button>
-      </form>
+      <form accept-charset="UTF-8" action="https://madmimi.com/signups/subscribe/188398" id="ema_signup_form" method="post" target="_blank">
+       <div style="margin:0;padding:0;display:inline">
+          <input name="utf8" type="hidden" value="✓"/>
+       </div>
+       <div class="mimi_field required">
+          <input id="signup_email" name="signup[email]" type="text" data-required-field="This field is required"/>
+       </div>
+       <div class="mimi_field">
+          <input type="submit" class="btn" value="" id="webform_submit_button"/>
+       </div>
+    </form>
     </div>
+
+
     
     <?php echo $after_widget;
   }

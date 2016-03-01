@@ -43,6 +43,9 @@ remove_action( 'woocommerce_before_shop_loop', 		'woocommerce_result_count', 			
 remove_action( 'woocommerce_before_shop_loop', 		'storefront_woocommerce_pagination', 		30 );
 remove_action( 'woocommerce_before_shop_loop',			'storefront_sorting_wrapper_close',			31 );
 
+remove_action( 'woocommerce_single_product_summary',      'woocommerce_template_single_add_to_cart',       30 );
+add_action( 'woocommerce_single_product_summary',    'woocommerce_template_single_add_to_cart',        15 );
+
 /**
  * Products
  * @see  storefront_upsell_display()

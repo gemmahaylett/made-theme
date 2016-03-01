@@ -157,6 +157,7 @@ include_once( 'inc/widget-popular-posts.php' );
 include_once( 'inc/widget-instagram.php' );
 include_once( 'inc/widget-social.php' );
 
+
 // Optional Customizations
 // Includes: TinyMCE tweaks, admin menu & bar settings, query overrides
 include('inc/functions/customizations.php');

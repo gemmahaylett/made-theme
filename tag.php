@@ -16,7 +16,6 @@ get_header(); ?>
 		<?php if ( $wp_query->have_posts() ) : ?>
 
 		<section class="grid grid_posts grid--loading">
-			<div class="flex-row">
 			<!-- <img class="grid__loader" src="/wp-content/themes/made-theme/assets/images/grid.svg" width="60" alt="Loader image" /> -->
 				<?php 
 				  $count = 0;
@@ -27,7 +26,6 @@ get_header(); ?>
 				 		
 				  }
 		    ?>
-		  </div>
   	</section>
 	
 		<?php get_template_part( 'inc/pagination' ); ?>

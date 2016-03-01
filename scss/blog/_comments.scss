@@ -80,9 +80,9 @@ article.comment {
 
 /* Post author highlighting */
 .commentlist > li.bypostauthor, 
-.commentlist .children > li.bypostauthor {
-	//border: $border;
-	padding: 5px 10px;
+.commentlist .children > li.bypostauthor{
+  //border: $border;
+  padding: 5px 10px;
 }
 
 .comments-footer {
@@ -100,11 +100,29 @@ article.comment {
     letter-spacing: .25em;
     line-height: 1;
   }
+
+  li:last-child {
+    vertical-align: middle;
+  }
+}
+
+#social-share-menu {
+  vertical-align: middle;
+  margin-left: -5px;
+  
+  li {
+    padding-left: 5px;
+  }
 }
 
 .comments-link {
 	border-right: $border;
 	padding-right: 10px;
+  padding-left: 10px;
+}
+
+.comment-link:first-child{
+  padding-left: none;
 }
 
 .share-love {
@@ -129,7 +147,7 @@ article.comment {
   margin: 1em 0;
 }
 
-.bypostauthor span.comment-author::before {
+li.bypostauthor > .comment > .comment-meta > .comment-author > .fn > span.comment-author::before {
   content: '\f004';
   font-family: FontAwesome;
   padding-right: 5px;
@@ -137,6 +155,6 @@ article.comment {
   font-size: 1em;
 }
 
-.bypostauthor span.comment-author {
+li.bypostauthor > .comment > .comment-meta > .comment-author > .fn > span.comment-author {
   color: $red;
 }

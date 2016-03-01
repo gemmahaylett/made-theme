@@ -36,3 +36,14 @@
   }
 }
 
+@media all and (max-width: 500px)  { 
+  #site-header .logo img{
+    width: 100%;
+  }
+
+  .shop-circle a img {
+    width: 25%;
+  }
+}
+
+

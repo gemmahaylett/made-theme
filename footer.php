@@ -43,20 +43,24 @@
   <div class="container">
   	<div id="copyright" class="row">
       <div class="clearfix">
-        <div class="col-md-4 col-sm-4 col-xs-12 footer-item-center">
+        <div class="col-md-5 col-sm-5 col-xs-12 footer-item-center">
           &copy; Copyright <?php echo date( 'Y' ); echo '&nbsp;'; echo bloginfo( 'name' ); ?><br>
-          <span class="credits">DESIGN BY <a href="http://www.octoberink.com/">OCTOBER INK</a> | DEV BY <a href="http://www.gemmahaylett.com/">GEMMA HAYLETT</a> </span>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12 footer-item-center">
+        <div class="col-md-2 col-sm-2 col-xs-12 footer-item-center">
           <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png'" alt="<?php bloginfo('name'); ?>">
           </a>
         </div>
-        <nav class="col-md-4 col-sm-4 col-xs-12 footer-item-center" role="navigation">
+        <nav class="col-md-5 col-sm-5 col-xs-12 footer-item-center" role="navigation">
           <?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
         </nav><!-- #access -->
       </div>
-  	</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits">DESIGN BY <a href="http://www.octoberink.com/">OCTOBER INK</a> | DEV BY <a href="http://www.gemmahaylett.com/">GEMMA HAYLETT</a> </p>
+      </div>
+    </div>
   </div>
 </footer><!-- #colophon -->
 
