@@ -300,3 +300,9 @@ table.cart .product-thumbnail {
     }
   }
 }
+
+@media all and (max-width: 480px)  { 
+  .woocommerce #primary {
+     margin-top: 0px;
+  }
+}

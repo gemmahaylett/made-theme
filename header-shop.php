@@ -38,10 +38,15 @@
     <?php // Lets other plugins and files tie into our theme's <head>:
     wp_head(); ?>
 </head>
+
+<?php if(is_mobile()) {
+  $mobileclass = "mobile-header";
+  $mobilehide = "hidden";
+} ?>
  
 <body <?php body_class(); ?>>
 	<div id="page">
-		<header id="site-header" role="banner" class="row">
+		<header id="site-header" role="banner" class="row <?php echo $mobileclass;?>">
             <div class="header"> 
                 <div class="container">
                     <div class="shop-link row">
@@ -54,12 +59,12 @@
                     </a>
                 </div>  
 
-                <hr>     
+                <hr class="row">     
 
                 <div class="container">
                     <div class="row">
                         <div class="menu-button">Menu</div>
-            			<nav class="access col-md-12" role="navigation">
+            			<nav class="access col-md-12 col-sm-12 col-xs-12" role="navigation">
             				<?php wp_nav_menu( array( 
                                 'theme_location' => 'primary',
                                 'menu_class' => 'flexnav', //Adding the class for FlexNav
@@ -87,7 +92,7 @@
             
             </div>
 
-            <?php if(is_shop()){ ?>
+            <?php if(is_shop() && !is_mobile()){ ?>
             <div class="shop-slider">
               <?php if ( get_field('shop_slider', 'options') ) : ?>
                 <?php while ( has_sub_field('shop_slider', 'options') ) : ?>
@@ -99,10 +104,6 @@
                 <?php endwhile; ?>
               <?php endif; ?>
           </div>
-          <?php } else { ?>
-
-          <hr> 
-
           <?php } ?>
 
 		</header><!-- #branding -->

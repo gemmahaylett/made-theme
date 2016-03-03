@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php  
-				if(wp_is_mobile()) {
+				if(is_mobile()) {
 					get_template_part( 'content', 'grid' ); 
 				} else {
 					get_template_part( 'content', get_post_format() ); 

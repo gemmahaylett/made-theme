@@ -171,6 +171,10 @@ img {
 	}
 }
 
+#site-header.mobile-header{
+	margin-bottom: 0px;
+}
+
 #searchform-page {
 	position: relative;
   text-align: center;
@@ -200,6 +204,10 @@ img {
 		  top: 8px;
 		  left: 55px;
 		}
+	}
+
+	.tutorial:nth-of-type(2n+1), .recipe:nth-of-type(2n+1) {
+	  clear: left;
 	}
 }
 

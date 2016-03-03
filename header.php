@@ -38,10 +38,14 @@
     <?php // Lets other plugins and files tie into our theme's <head>:
     wp_head(); ?>
 </head>
+
+<?php if(is_mobile()) {
+  $mobileclass = "mobile-header";
+} ?>
  
 <body <?php body_class(); ?>>
 	<div id="page">
-		<header id="site-header" role="banner" class="row">
+		<header id="site-header" role="banner" class="row <?php echo $mobileclass;?>">
             <div class="header"> 
                 <div class="container">
                     <div class="shop-link row">
@@ -86,7 +90,7 @@
                   
             </div>
 
-            <?php if (is_front_page() && !wp_is_mobile()): ?>
+            <?php if (is_front_page() && !is_mobile()): ?>
             <div class="top-slider">
                 <?php if ( get_field('top_slider', 'options') ) : ?>
                   <?php while ( has_sub_field('top_slider', 'options') ) : ?>

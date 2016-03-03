@@ -58,7 +58,7 @@ if( function_exists('acf_add_options_page') ) {
 
 function posts_on_homepage( $query ) {
   if ( $query->is_home() && $query->is_main_query() ) {
-    if(wp_is_mobile()){
+    if(is_mobile()){
       $query->set( 'posts_per_page', 50 );
     } else {
       $query->set( 'posts_per_page', 3 );
