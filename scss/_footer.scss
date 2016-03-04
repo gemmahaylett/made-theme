@@ -64,6 +64,18 @@
   margin-bottom: -20px;
 }
 
+.bottom-slider .item .hover-image:last-child {
+  display: none;
+}
+
+.bottom-slider .item:hover .hover-image:first-child {
+  display: none;
+}
+
+.bottom-slider .item:hover .hover-image:last-child {
+  display: inline-block;
+}
+
 @media all and (min-width: 1050px) and (max-width: 1200px)  { 
   .footer-item-center:nth-child(2) {
     width: 20%;

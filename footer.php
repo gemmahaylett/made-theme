@@ -24,15 +24,17 @@
           <div class="bottom-slider">
               <?php if ( get_field('bottom_slider', 'options') ) : ?>
                 <?php while ( has_sub_field('bottom_slider', 'options') ) : ?>
-                  <div class="item">
-                    <img src="<?php the_sub_field('image', 'options'); ?>"/>
-                    <div class="caption">
-                      <a href="<?php the_sub_field('link', 'options'); ?>">
-                        Read More
-                      </a>
+                    <div class="item">
+                        <a href="<?php the_sub_field('link', 'options'); ?>">
+                            <?php if( get_sub_field('hover_image', 'options')) { ?>
+                                <img class="hover-image" src="<?php the_sub_field('image', 'options'); ?>"/>
+                                <img class="hover-image" src="<?php the_sub_field('hover_image', 'options'); ?>"/>
+                            <?php } else { ?>
+                                <img src="<?php the_sub_field('image', 'options'); ?>"/>
+                            <?php } ?>
+                        </a>
                     </div>
-                  </div>
-                <?php endwhile; ?>
+                  <?php endwhile; ?>
               <?php endif; ?>
           </div>
         </div>
