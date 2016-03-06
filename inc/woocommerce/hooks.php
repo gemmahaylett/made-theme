@@ -64,6 +64,13 @@ add_action( 'storefront_header', 'storefront_product_search', 	40 );
 add_action( 'storefront_header', 'storefront_header_cart', 		60 );
 
 /**
+ * Cart
+ * @see  storefront_page_before()
+ */
+
+add_action( 'storefront_page_before', 'woocommerce_breadcrumb',  20);
+
+/**
  * Filters
  * @see  storefront_woocommerce_body_class()
  * @see  storefront_cart_link_fragment()

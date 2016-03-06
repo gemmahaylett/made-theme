@@ -59,7 +59,7 @@
                     </a>
                 </div>  
 
-                <hr class="row">     
+                <hr>     
 
                 <div class="container">
                     <div class="row">
@@ -104,6 +104,8 @@
                 <?php endwhile; ?>
               <?php endif; ?>
           </div>
+          <?php } else { ?>
+            <hr>
           <?php } ?>
 
 		</header><!-- #branding -->

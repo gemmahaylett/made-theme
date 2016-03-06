@@ -138,6 +138,14 @@
   width: 100%;
 }
 
+/* Product */
+.woocommerce .product .summary {
+  a {
+    color: #89d0d2;
+    letter-spacing: .15em;
+  }
+}
+
 /* Top Slider */
 .shop-slider {
   display: none;
@@ -172,7 +180,7 @@
   }
 }
 
-.archive.woocommerce .woocommerce-breadcrumb{
+.post-type-archive.woocommerce .woocommerce-breadcrumb{
   display: none;
 }
 

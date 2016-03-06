@@ -113,4 +113,11 @@ function woo_remove_product_tabs( $tabs ) {
   return $tabs;
 
 }
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
+function jk_change_breadcrumb_home_text( $defaults ) {
+    // Change the breadcrumb home text from 'Home' to 'Appartment'
+  $defaults['home'] = 'SHOP HOME';
+  return $defaults;
+}
 ?>
