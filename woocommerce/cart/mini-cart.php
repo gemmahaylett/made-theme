@@ -37,11 +37,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php else : ?>
 							<a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
 								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . '<div>'.$product_name.'</div>'; ?>
+							  <?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<div class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</div>', $cart_item, $cart_item_key ); ?>
 							</a>
 						<?php endif; ?>
 						<?php //echo WC()->cart->get_item_data( $cart_item ); ?>
 
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<div class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</div>', $cart_item, $cart_item_key ); ?>
 					</li>
 					<?php
 				}

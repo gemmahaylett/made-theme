@@ -104,8 +104,10 @@
                 <?php endwhile; ?>
               <?php endif; ?>
           </div>
-          <?php } else { ?>
-            <hr>
+          <?php } else { 
+            if(!is_mobile()) :?>
+              <hr>
+            <?php endif; ?>
           <?php } ?>
 
 		</header><!-- #branding -->
