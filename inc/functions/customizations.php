@@ -1,6 +1,6 @@
 <?php 
 // Remove admin bar for all users
-show_admin_bar( false );
+//show_admin_bar( false );
 
 // Move ACF Options menu under Settings
 //if( function_exists('acf_add_options_sub_page') )

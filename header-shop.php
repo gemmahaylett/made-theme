@@ -51,10 +51,10 @@
                 <div class="container">
                     <div class="shop-link row">
                         <div class="shop-circle col-md-12">
-                            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-link.png"></a>
+                            <a href="<?php echo esc_url( home_url( '/', 'http') ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-link.png"></a>
                         </div>
                     </div> 
-                    <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
+                    <a href="<?php echo esc_url( home_url( '', 'http') ); ?>/" class="logo">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo.png'" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>  
@@ -77,7 +77,7 @@
                               <li><a title="Twitter" href="<?php the_field( 'twitter', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-twitter"></i></a></li>
                               <li><a title="You Tube" href="<?php the_field( 'youtube', 'options' ); ?>" target="_blank"><i class="icon-fixed-width fa fa-youtube-play"></i></a></li>
                               <li class="search-form">
-                                <form method="get" id="searchform-header" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <form method="get" id="searchform-header" action="<?php echo esc_url( home_url( '/', 'http' ) ); ?>">
                                   <input type="text" class="field" name="s" id="search-header" />
                                   <input type="submit" class="submit hidden" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'SEARCH', 'made-theme' ); ?>" />
                                   <label for="s"><i class="fa fa-search"></i></label>

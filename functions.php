@@ -29,6 +29,8 @@ function made_theme_setup() {
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
+  update_option('image_default_link_type', 'file' );
+
 	// Add custom nav menu support
 	register_nav_menus( 
     array('primary' => __( 'Primary Menu', 'made-media' ),

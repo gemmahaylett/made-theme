@@ -49,7 +49,7 @@
           &copy; Copyright <?php echo date( 'Y' ); echo '&nbsp;'; echo bloginfo( 'name' ); ?><br>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-12 footer-item-center">
-          <a href="<?php echo esc_url( home_url() ); ?>/" class="logo">
+          <a href="<?php echo esc_url( home_url( '/', 'http') ); ?>" class="logo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png'" alt="<?php bloginfo('name'); ?>">
           </a>
         </div>

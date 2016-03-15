@@ -151,9 +151,16 @@ h3 {
 }
 
 a {
-    color: <?php echo esc_attr( $base ); ?>;
+    color: #F1625e;
     font-weight: normal;
     text-decoration: underline;
+}
+
+small {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #F1625e;
 }
 
 img {
