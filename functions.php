@@ -49,6 +49,7 @@ function made_theme_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
+    'title-tag',
 	) );
 	
 	// Add custom image sizes
