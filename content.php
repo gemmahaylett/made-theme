@@ -40,7 +40,7 @@
 			<li class="share-love">
 				SHARE THE LOVE: 
 			</li>
-			<li>
+			<li class="share-love-icon">
 				<ul id="social-share-menu" class="social-media-menu square-icons comment-icons">
 		      <li><a title="Facebook" target="_blank" href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>"><i class="icon-fixed-width fa fa-facebook"></i></a></li>
 		    	<li><a title="Instagram" target="_blank" href="<?php the_field( 'instagram', 'options' ); ?>"><i class="icon-fixed-width fa fa-instagram"></i></a></li>

@@ -226,6 +226,10 @@
   font-weight: 700;
 }
 
+#payment .place-order strong {
+  display: none;
+}
+
 .wc-proceed-to-checkout .button.checkout-button, #place_order, .button.buy {
   font-size: 1.387em;
   text-transform: uppercase;

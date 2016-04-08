@@ -8,8 +8,9 @@
  */
 
 if ( ! function_exists( 'made_theme_comment' ) ) :
-
+$countcomm = 1;
 function made_theme_comment( $comment, $args, $depth ) {
+	global $countcomm;
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
@@ -25,6 +26,7 @@ function made_theme_comment( $comment, $args, $depth ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
+					<?php echo $countcomm++.')'; ?>
 					<?php
 						/* translators: 1: comment author, 2: date and time */
 						printf( __( '%1$s', 'made-theme' ),
