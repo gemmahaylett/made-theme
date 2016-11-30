@@ -58,6 +58,8 @@ article.comment {
 .comment-content {
 	p {
 		margin-bottom: 1em;
+    word-break: keep-all;
+    word-wrap: normal;
 		&:last-of-type {
 			margin-bottom: 0;
 		}

@@ -151,13 +151,51 @@ function custom_override_billing_fields( $fields ) {
 }
 
 function custom_override_shipping_fields( $fields ) {
-  unset($fields['shipping_state']);
-  unset($fields['shipping_country']);
-  unset($fields['shipping_company']);
-  unset($fields['shipping_address_1']);
-  unset($fields['shipping_address_2']);
-  unset($fields['shipping_postcode']);
-  unset($fields['shipping_city']);
+	if( woo_cart_has_virtual_product() == true ) {
+	  unset($fields['shipping_state']);
+	  unset($fields['shipping_country']);
+	  unset($fields['shipping_company']);
+	  unset($fields['shipping_address_1']);
+	  unset($fields['shipping_address_2']);
+	  unset($fields['shipping_postcode']);
+	  unset($fields['shipping_city']);
+  }
   return $fields;
 }
 /* End - Remove Woocommerce User Fields */
+
+/**
+ * Check if the cart contains virtual product
+ *
+ * @return bool
+*/
+function woo_cart_has_virtual_product() {
+  
+  global $woocommerce;
+  
+  // By default, no virtual product
+  $has_virtual_products = false;
+  
+  // Default virtual products number
+  $virtual_products = 0;
+  
+  // Get all products in cart
+  $products = $woocommerce->cart->get_cart();
+  
+  // Loop through cart products
+  foreach( $products as $product ) {
+	  
+	  // Get product ID and '_virtual' post meta
+	  $product_id = $product['product_id'];
+	  $is_virtual = get_post_meta( $product_id, '￼_virtual', true );
+	  
+	  // Update $has_virtual_product if product is virtual
+	  if( $is_virtual == 'no' )
+  		$virtual_products += 1;
+  }
+  
+  if( count($products) == $virtual_products )
+  	$has_virtual_products = true;
+  
+  return $has_virtual_products;
+}

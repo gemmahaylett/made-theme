@@ -37,7 +37,7 @@ class made_theme_instagram_widget extends WP_Widget {
           limit: 4,
           userId: 182650508,
           resolution: 'low_resolution',
-          accessToken: '182650508.467ede5.e8b7cf599294426b82d0e455e6cd7bf2',
+          accessToken: '182650508.cebe9f4.658e4fd00ca74073b3401f808c59ce15',
           template: '<div class="col-md-6 col-sm-6 col-xs-6 widgetfeed"><a href="{{link}}"><img src="{{image}}" /></a></div>'
         });
 
