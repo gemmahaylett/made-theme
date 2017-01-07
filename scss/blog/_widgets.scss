@@ -64,19 +64,29 @@
     text-align: justify;
   }
 
+  a {
+    display: block; 
+    margin: 1em auto -2em; 
+    width: 80%; 
+    height: 50px; 
+    background-color: #F4E303;
+    color: #fff; 
+    text-transform: uppercase; 
+    font-weight: 700; 
+    letter-spacing: .4em; 
+    line-height: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+  }
+
   button {
     display: block;
     margin: 1em auto -2em;
     width: 80%;
     height: 50px;
     background-color: $yellow;
-
-    a {
-      color: white;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.4em;
-    }
   }
 
 }

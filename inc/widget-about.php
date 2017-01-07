@@ -35,7 +35,7 @@ class made_theme_about_widget extends WP_Widget {
       echo '<p>' . $about_text . '</p>';
 
     if ( ! empty( $about_btn ) )
-      echo '<button><a href=' . $about_link . '>'.$about_btn.'</a></button>';
+      echo '<a href=' . $about_link . '>'.$about_btn.'</a>';
 
     echo '</div>';
 
